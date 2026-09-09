@@ -658,6 +658,9 @@
       .page { margin-top: 18px; margin-bottom: 18px; border-radius: 28px; }
       .sticky { bottom: 18px; border: 1px solid #D9E7EF; border-radius: 18px; width: 474px; }
     }
+    @media (max-width: 500px) {
+      .sticky { display: none; }
+    }
 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
