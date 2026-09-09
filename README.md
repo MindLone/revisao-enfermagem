@@ -1,61 +1,46 @@
-# Enfermagem na Prova
+# Revisão de Enfermagem
 
-Landing page mobile-first para o **Pack Enfermagem para Concursos 2026**.
+Landing page do **Revisão de Enfermagem — Concursos 2026**, um pack digital de revisão para concursos e processos seletivos de Enfermagem.
 
-## Configuração rápida
-
-Tudo está concentrado em `index.html` para facilitar mudanças rápidas durante os testes de Meta Ads.
-
-### Checkout
-
-No final do `index.html`, altere:
-
-```js
-const CHECKOUT_URL = "";
-```
-
-### Vídeo 9:16
-
-Procure pelo comentário:
-
-```html
-<!-- SUBSTITUIR ESTE BLOCO PELO PLAYER 9:16 (Wistia/Vimeo/MP4) -->
-```
-
-Substitua o bloco `.video-wrap` pelo embed do player.
-
-### Campanha por concurso/estado
-
-O topo e o bônus atual estão configurados para **SES-TO 2026 / FGV / prova 01-11-2026**.
-
-Para outra campanha, atualize:
-
-- a barra de urgência no topo;
-- o card `Reta Final ...`;
-- `BONUS_CONFIG` no JavaScript;
-- textos específicos do concurso, sempre usando datas reais.
+Domínio planejado: **revisaoenfermagem.shop**
 
 ## Estrutura atual da oferta
 
-- 150+ mapas mentais;
-- 500 questões (200 de SUS comentadas + 300 específicas);
+- 150+ mapas mentais de Enfermagem;
+- 500 questões (200 de Legislação do SUS comentadas + 300 específicas);
 - 300 flashcards;
-- 5 simulados;
+- 5 simulados completos;
 - 100 pegadinhas de prova;
 - 100 termos técnicos;
 - SUS Descomplicado;
-- cálculos e diluições;
+- cálculos, diluições e medicamentos;
 - imunização e rede de frio;
 - biossegurança, IRAS e CME;
 - urgência e emergência;
 - cronograma de 30 dias + reta final de 7 dias;
+- caderno de erros;
 - bônus específico por edital.
+
+## Edição atual
+
+A campanha-base está preparada para **SES-TO 2026 / FGV**, com prova prevista para **01/11/2026**. O produto principal é evergreen e os blocos de reta final podem ser adaptados para outros editais e estados.
 
 ## Identidade visual
 
-- Azul-marinho: `#062B52` / `#0B3B70`
-- Azul-claro/turquesa: `#0FAFBF` / `#20C5D6`
-- Laranja de destaque: `#FF8A1F`
-- Verde CTA: `#22B573`
+Marca: **Revisão de Enfermagem**  
+Linha de apoio: **Concursos 2026**
 
-O layout é desenhado prioritariamente para telas de celular e fica centralizado em uma moldura de até 500px quando acessado no desktop.
+A identidade usa principalmente:
+
+- azul profundo para confiança e estudo;
+- verde/teal para Enfermagem e saúde;
+- degradês azul-verde na logotipo;
+- laranja apenas em pequenos destaques quando necessário.
+
+A logotipo oficial está em `assets/logo-revisao-enfermagem-2026.webp`.
+
+## Site
+
+A página mantém o foco em tráfego de Meta Ads e apresenta rapidamente os entregáveis, demonstração em vídeo vertical 9:16, materiais, bônus, oferta e FAQ.
+
+O link definitivo do checkout ainda precisa ser configurado quando estiver disponível.
