@@ -1,0 +1,946 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0B3B70" />
+  <meta name="description" content="Enfermagem na Prova — Pack digital de revisão para concursos de Enfermagem 2026 com mapas mentais, questões, simulados, flashcards e guias rápidos." />
+  <title>Enfermagem na Prova | Pack Concursos 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy-950: #062B52;
+      --navy-900: #0B3B70;
+      --navy-800: #11508F;
+      --cyan-600: #0FAFBF;
+      --cyan-500: #20C5D6;
+      --cyan-100: #DDF8FB;
+      --orange-500: #FF8A1F;
+      --orange-100: #FFF0E2;
+      --green-500: #22B573;
+      --red-500: #E64A45;
+      --ink: #17324D;
+      --muted: #62778B;
+      --line: #DCE8F1;
+      --soft: #F4F9FC;
+      --white: #FFFFFF;
+      --shadow: 0 14px 40px rgba(8, 54, 96, .10);
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: #EAF3F8;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a { color: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+
+    .page {
+      width: 100%;
+      max-width: 500px;
+      min-height: 100vh;
+      margin: 0 auto;
+      background: var(--white);
+      box-shadow: 0 0 60px rgba(10, 55, 96, .08);
+      overflow: hidden;
+      padding-bottom: 92px;
+    }
+
+    .urgency-bar {
+      background: linear-gradient(90deg, #D9443F, #EA5B43);
+      color: white;
+      padding: 9px 14px 10px;
+      text-align: center;
+      font-size: 11px;
+      line-height: 1.35;
+      font-weight: 800;
+      letter-spacing: .015em;
+    }
+    .urgency-bar strong { color: #FFF4B2; }
+
+    .header {
+      padding: 17px 18px 10px;
+      background: white;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      width: 48px;
+      height: 48px;
+      flex: 0 0 48px;
+      filter: drop-shadow(0 6px 10px rgba(6, 43, 82, .08));
+    }
+
+    .brand-words { line-height: .86; }
+    .brand-main {
+      display: block;
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: -.045em;
+      background: linear-gradient(180deg, #062B52 0%, #11508F 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .brand-script {
+      display: block;
+      margin-top: 3px;
+      font-family: "Caveat", cursive;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -.02em;
+      background: linear-gradient(180deg, #45D4E0 0%, #0FAFBF 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero {
+      position: relative;
+      padding: 18px 18px 27px;
+      text-align: center;
+      background:
+        radial-gradient(circle at 12% 14%, rgba(32,197,214,.16), transparent 29%),
+        radial-gradient(circle at 90% 7%, rgba(255,138,31,.12), transparent 25%),
+        linear-gradient(180deg, #FFFFFF 0%, #F5FBFD 100%);
+      border-bottom: 1px solid #E8F1F6;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin: 0 auto 12px;
+      padding: 7px 11px;
+      border-radius: 999px;
+      color: var(--navy-900);
+      background: #E9F7FA;
+      border: 1px solid #CAEDF2;
+      font-size: 10px;
+      line-height: 1;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+    }
+    .eyebrow-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--orange-500);
+      box-shadow: 0 0 0 4px rgba(255, 138, 31, .13);
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--navy-950);
+      font-size: clamp(30px, 9.3vw, 43px);
+      line-height: .99;
+      letter-spacing: -.055em;
+      font-weight: 900;
+    }
+    h1 .highlight {
+      position: relative;
+      color: var(--cyan-600);
+      white-space: nowrap;
+    }
+    h1 .highlight::after {
+      content: "";
+      position: absolute;
+      left: 4%;
+      right: 2%;
+      bottom: -3px;
+      height: 5px;
+      border-radius: 999px;
+      background: var(--orange-500);
+      transform: rotate(-1.5deg);
+      opacity: .92;
+    }
+
+    .hero-sub {
+      max-width: 410px;
+      margin: 16px auto 0;
+      color: #4A657C;
+      font-size: 14px;
+      line-height: 1.55;
+      font-weight: 500;
+    }
+    .hero-sub strong { color: var(--navy-900); }
+
+    .hero-points {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin: 16px 0 0;
+    }
+    .hero-point {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 7px 9px;
+      border-radius: 10px;
+      background: white;
+      border: 1px solid #DBEAF2;
+      color: #35536C;
+      font-size: 10px;
+      font-weight: 800;
+      box-shadow: 0 5px 15px rgba(13, 76, 126, .04);
+    }
+    .hero-point svg { width: 13px; height: 13px; color: var(--green-500); }
+
+    .primary-cta {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 18px;
+      min-height: 54px;
+      padding: 14px 18px;
+      border: 0;
+      border-radius: 15px;
+      background: linear-gradient(180deg, #22C77D 0%, #16A864 100%);
+      color: #FFFFFF;
+      box-shadow: 0 10px 24px rgba(22,168,100,.22), inset 0 1px rgba(255,255,255,.25);
+      font: inherit;
+      font-size: 14px;
+      font-weight: 900;
+      letter-spacing: -.01em;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform .15s ease, filter .15s ease;
+    }
+    .primary-cta:active { transform: scale(.985); filter: brightness(.97); }
+    .cta-micro {
+      margin-top: 8px;
+      color: #698094;
+      font-size: 9.5px;
+      font-weight: 700;
+    }
+
+    .section {
+      padding: 30px 18px;
+    }
+    .section.soft { background: var(--soft); }
+    .section.dark {
+      background:
+        radial-gradient(circle at 100% 0%, rgba(32,197,214,.18), transparent 34%),
+        linear-gradient(155deg, #062B52 0%, #0A477D 100%);
+      color: white;
+    }
+
+    .section-kicker {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--orange-500);
+      font-size: 10px;
+      line-height: 1;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+    }
+    .section-title {
+      margin: 0;
+      color: var(--navy-950);
+      font-size: 24px;
+      line-height: 1.08;
+      letter-spacing: -.04em;
+      font-weight: 900;
+    }
+    .dark .section-title { color: white; }
+    .section-copy {
+      margin: 9px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+    .dark .section-copy { color: #C8DAE8; }
+
+    .video-wrap {
+      width: min(76vw, 300px);
+      margin: 20px auto 0;
+      aspect-ratio: 9 / 16;
+      position: relative;
+      overflow: hidden;
+      border-radius: 23px;
+      border: 5px solid #FFFFFF;
+      background:
+        linear-gradient(180deg, rgba(6,43,82,.08), rgba(6,43,82,.65)),
+        radial-gradient(circle at 50% 25%, #54DDE7 0%, #129FB3 26%, #0B3B70 78%);
+      box-shadow: 0 20px 40px rgba(4, 39, 72, .24);
+    }
+    .video-wrap::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(255,255,255,.16) 1px, transparent 1px);
+      background-size: 18px 18px;
+      opacity: .45;
+    }
+    .video-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 28px;
+      text-align: center;
+      color: white;
+    }
+    .play {
+      width: 72px;
+      height: 72px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 16px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.96);
+      box-shadow: 0 10px 26px rgba(0,0,0,.16);
+    }
+    .play::after {
+      content: "";
+      width: 0;
+      height: 0;
+      margin-left: 5px;
+      border-top: 12px solid transparent;
+      border-bottom: 12px solid transparent;
+      border-left: 19px solid var(--orange-500);
+    }
+    .video-placeholder strong {
+      font-size: 19px;
+      line-height: 1.15;
+      letter-spacing: -.025em;
+    }
+    .video-placeholder span {
+      margin-top: 8px;
+      color: #D6F4F7;
+      font-size: 11px;
+      line-height: 1.45;
+    }
+
+    .trust-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 7px;
+      margin-top: 22px;
+    }
+    .trust-item {
+      padding: 11px 6px;
+      border-radius: 13px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.12);
+      text-align: center;
+    }
+    .trust-item b { display: block; font-size: 17px; color: white; }
+    .trust-item span { display: block; margin-top: 3px; font-size: 8.5px; line-height: 1.25; color: #C9DDEA; font-weight: 700; }
+
+    .deliverables {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 9px;
+      margin-top: 18px;
+    }
+    .deliverable {
+      min-height: 155px;
+      padding: 15px 13px;
+      border-radius: 17px;
+      background: white;
+      border: 1px solid #DDEBF2;
+      box-shadow: 0 8px 22px rgba(8, 61, 101, .055);
+    }
+    .deliverable-icon {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 11px;
+      background: #E6F9FB;
+      color: var(--cyan-600);
+      font-size: 20px;
+    }
+    .deliverable:nth-child(2) .deliverable-icon,
+    .deliverable:nth-child(5) .deliverable-icon { background: var(--orange-100); color: var(--orange-500); }
+    .deliverable:nth-child(3) .deliverable-icon,
+    .deliverable:nth-child(6) .deliverable-icon { background: #E9F6EF; color: var(--green-500); }
+    .deliverable h3 {
+      margin: 11px 0 0;
+      color: var(--navy-950);
+      font-size: 13px;
+      line-height: 1.2;
+      letter-spacing: -.025em;
+    }
+    .deliverable p {
+      margin: 5px 0 0;
+      color: #6B7F91;
+      font-size: 10px;
+      line-height: 1.45;
+    }
+    .deliverable strong { color: var(--navy-900); }
+
+    .guides-card {
+      margin-top: 10px;
+      padding: 17px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #0B3B70 0%, #0E678D 100%);
+      color: white;
+      box-shadow: var(--shadow);
+    }
+    .guides-card h3 { margin: 0; font-size: 15px; letter-spacing: -.025em; }
+    .guide-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 12px;
+    }
+    .guide-chip {
+      padding: 7px 8px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,.15);
+      background: rgba(255,255,255,.09);
+      color: #E9F7FC;
+      font-size: 9px;
+      font-weight: 700;
+    }
+
+    .bonus-card {
+      margin-top: 18px;
+      padding: 17px;
+      border-radius: 19px;
+      background: linear-gradient(150deg, #FFF7EE 0%, #FFF 62%);
+      border: 1px solid #FFD8B1;
+      box-shadow: 0 12px 30px rgba(156, 93, 29, .08);
+    }
+    .bonus-label {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 9px;
+      border-radius: 999px;
+      background: var(--orange-500);
+      color: white;
+      font-size: 9px;
+      font-weight: 900;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+    }
+    .bonus-card h3 {
+      margin: 10px 0 0;
+      color: var(--navy-950);
+      font-size: 18px;
+      line-height: 1.15;
+      letter-spacing: -.035em;
+    }
+    .bonus-card p {
+      margin: 7px 0 0;
+      color: #6E7780;
+      font-size: 10.5px;
+      line-height: 1.5;
+    }
+    .bonus-meta {
+      display: flex;
+      gap: 7px;
+      margin-top: 12px;
+      flex-wrap: wrap;
+    }
+    .bonus-meta span {
+      padding: 6px 8px;
+      border-radius: 8px;
+      background: #FFF0E1;
+      color: #B25C0B;
+      font-size: 9px;
+      font-weight: 800;
+    }
+
+    .method {
+      margin-top: 18px;
+      display: grid;
+      gap: 10px;
+    }
+    .method-item {
+      display: grid;
+      grid-template-columns: 40px 1fr;
+      gap: 11px;
+      align-items: start;
+      padding: 14px;
+      border-radius: 16px;
+      background: white;
+      border: 1px solid #E0EAF1;
+    }
+    .method-num {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 11px;
+      color: white;
+      background: var(--navy-900);
+      font-size: 13px;
+      font-weight: 900;
+    }
+    .method-item:nth-child(2) .method-num { background: var(--cyan-600); }
+    .method-item:nth-child(3) .method-num { background: var(--orange-500); }
+    .method-item h3 { margin: 1px 0 0; color: var(--navy-950); font-size: 12px; }
+    .method-item p { margin: 4px 0 0; color: #6D8192; font-size: 10px; line-height: 1.45; }
+
+    .offer {
+      padding: 30px 18px 34px;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(32,197,214,.10), transparent 25%),
+        linear-gradient(180deg, #F6FBFD 0%, #FFFFFF 100%);
+    }
+    .offer-box {
+      padding: 20px 17px;
+      border: 2px solid #BDEAF0;
+      border-radius: 23px;
+      background: white;
+      box-shadow: var(--shadow);
+    }
+    .offer-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .offer-badge {
+      padding: 6px 9px;
+      border-radius: 8px;
+      background: #E9F8FA;
+      color: var(--cyan-600);
+      font-size: 9px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+    .updated {
+      color: var(--green-500);
+      font-size: 9px;
+      font-weight: 900;
+    }
+    .offer-box h2 {
+      margin: 12px 0 0;
+      color: var(--navy-950);
+      font-size: 22px;
+      line-height: 1.05;
+      letter-spacing: -.04em;
+    }
+    .offer-list {
+      display: grid;
+      gap: 8px;
+      margin: 16px 0;
+      padding: 0;
+      list-style: none;
+    }
+    .offer-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      color: #496277;
+      font-size: 10.5px;
+      line-height: 1.35;
+      font-weight: 600;
+    }
+    .offer-list li::before {
+      content: "✓";
+      flex: 0 0 18px;
+      width: 18px;
+      height: 18px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #E4F6ED;
+      color: var(--green-500);
+      font-size: 10px;
+      font-weight: 900;
+    }
+    .price-label { color: #708396; font-size: 10px; font-weight: 700; }
+    .price {
+      display: flex;
+      align-items: baseline;
+      gap: 5px;
+      margin-top: 2px;
+      color: var(--navy-950);
+    }
+    .price small { font-size: 16px; font-weight: 900; }
+    .price strong { font-size: 42px; line-height: 1; letter-spacing: -.065em; }
+    .price em { font-size: 18px; font-style: normal; font-weight: 900; }
+    .pay-note { margin-top: 4px; color: #728497; font-size: 9px; font-weight: 600; }
+
+    .secure-row {
+      display: flex;
+      justify-content: center;
+      gap: 11px;
+      margin-top: 11px;
+      color: #708295;
+      font-size: 8.5px;
+      font-weight: 700;
+    }
+
+    .faq { margin-top: 18px; }
+    details {
+      border-bottom: 1px solid #E3ECF2;
+      padding: 0;
+    }
+    summary {
+      list-style: none;
+      position: relative;
+      padding: 14px 28px 14px 0;
+      cursor: pointer;
+      color: var(--navy-950);
+      font-size: 11px;
+      font-weight: 800;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: "+";
+      position: absolute;
+      right: 2px;
+      top: 10px;
+      color: var(--cyan-600);
+      font-size: 20px;
+      font-weight: 500;
+    }
+    details[open] summary::after { content: "−"; }
+    details p {
+      margin: -3px 0 14px;
+      color: #6B7F91;
+      font-size: 10px;
+      line-height: 1.5;
+    }
+
+    .footer {
+      padding: 24px 18px 30px;
+      text-align: center;
+      background: #052D52;
+      color: #AFC7DA;
+    }
+    .footer-brand { color: white; font-size: 12px; font-weight: 900; }
+    .footer p { margin: 7px auto 0; max-width: 390px; font-size: 8.5px; line-height: 1.5; }
+    .footer-links { display: flex; justify-content: center; gap: 14px; margin-top: 12px; }
+    .footer-links a { color: #C8DCEB; font-size: 8.5px; text-decoration: underline; text-underline-offset: 2px; }
+
+    .sticky {
+      position: fixed;
+      z-index: 50;
+      left: 50%;
+      bottom: 0;
+      width: min(500px, 100%);
+      transform: translateX(-50%);
+      padding: 10px 13px max(10px, env(safe-area-inset-bottom));
+      background: rgba(255,255,255,.95);
+      border-top: 1px solid #D9E7EF;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 -10px 28px rgba(10, 55, 96, .10);
+    }
+    .sticky .primary-cta { margin: 0; min-height: 48px; font-size: 13px; border-radius: 13px; }
+
+    .pulse { animation: pulse 2.4s ease-in-out infinite; }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 10px 24px rgba(22,168,100,.22); }
+      50% { box-shadow: 0 10px 30px rgba(22,168,100,.36); }
+    }
+
+    @media (min-width: 501px) {
+      .page { margin-top: 18px; margin-bottom: 18px; border-radius: 28px; }
+      .sticky { bottom: 18px; border: 1px solid #D9E7EF; border-radius: 18px; width: 474px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .pulse { animation: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="urgency-bar" id="urgencyBar">
+      SES-TO 2026 • PROVA EM <strong>01/11</strong> • <span id="countdownText">RETA FINAL EM ANDAMENTO</span>
+    </div>
+
+    <header class="header">
+      <a class="brand" href="#top" aria-label="Enfermagem na Prova">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <defs>
+            <linearGradient id="navyGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#062B52"/><stop offset="1" stop-color="#11508F"/>
+            </linearGradient>
+            <linearGradient id="cyanGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#45D4E0"/><stop offset="1" stop-color="#0FAFBF"/>
+            </linearGradient>
+          </defs>
+          <path d="M12 14c0-3 2-5 5-5h28c3 0 5 2 5 5v34c0 3-2 5-5 5H17c-3 0-5-2-5-5V14Z" fill="url(#navyGrad)"/>
+          <path d="M8 18v33c0 4 3 7 7 7h29" fill="none" stroke="url(#cyanGrad)" stroke-width="4" stroke-linecap="round"/>
+          <path d="M19 22h17M19 29h13M19 36h9" stroke="#31CDD9" stroke-width="3.5" stroke-linecap="round"/>
+          <path d="m34 40 5 5 10-13" fill="none" stroke="#FF8A1F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M9 54h14l4-7 5 13 5-9 3 3h15" fill="none" stroke="#20C5D6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="brand-words">
+          <span class="brand-main">Enfermagem</span>
+          <span class="brand-script">na Prova</span>
+        </span>
+      </a>
+    </header>
+
+    <section class="hero" id="top">
+      <div class="eyebrow"><span class="eyebrow-dot"></span> Pack atualizado 2026</div>
+      <h1>Revise o que importa para chegar mais preparado <span class="highlight">na prova.</span></h1>
+      <p class="hero-sub">
+        Um pack digital de revisão para concursos de Enfermagem com <strong>mapas mentais, questões, simulados, flashcards e guias rápidos</strong> — organizado para estudar pelo celular.
+      </p>
+
+      <div class="hero-points" aria-label="Benefícios principais">
+        <span class="hero-point">
+          <svg viewBox="0 0 24 24" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Acesso imediato
+        </span>
+        <span class="hero-point">
+          <svg viewBox="0 0 24 24" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          100% digital
+        </span>
+        <span class="hero-point">
+          <svg viewBox="0 0 24 24" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Feito para revisão
+        </span>
+      </div>
+
+      <a class="primary-cta pulse js-cta" href="#oferta">QUERO VER O PACK COMPLETO ↓</a>
+      <div class="cta-micro">Sem aulas longas. Abra, revise e pratique.</div>
+    </section>
+
+    <section class="section dark">
+      <span class="section-kicker">VEJA ANTES DE DECIDIR</span>
+      <h2 class="section-title">Tudo o que você recebe, explicado em poucos minutos.</h2>
+      <p class="section-copy">Aqui entra o seu vídeo vertical 9:16 mostrando o material, os diferenciais e como o pack funciona na prática.</p>
+
+      <!-- SUBSTITUIR ESTE BLOCO PELO PLAYER 9:16 (Wistia/Vimeo/MP4) -->
+      <div class="video-wrap" aria-label="Espaço reservado para vídeo 9 por 16">
+        <div class="video-placeholder">
+          <div class="play" aria-hidden="true"></div>
+          <strong>Veja o que vem no Pack</strong>
+          <span>Resumos • Questões • Mapas Mentais • Simulados • Bônus</span>
+        </div>
+      </div>
+
+      <div class="trust-row">
+        <div class="trust-item"><b>150+</b><span>mapas mentais</span></div>
+        <div class="trust-item"><b>500</b><span>questões para treino</span></div>
+        <div class="trust-item"><b>5</b><span>simulados completos</span></div>
+      </div>
+    </section>
+
+    <section class="section soft">
+      <span class="section-kicker">O QUE VEM NO PACK</span>
+      <h2 class="section-title">Material para revisar, praticar e identificar seus pontos fracos.</h2>
+      <p class="section-copy">Sem transformar a página em uma apostila: estes são os entregáveis que realmente importam.</p>
+
+      <div class="deliverables">
+        <article class="deliverable">
+          <div class="deliverable-icon">🧠</div>
+          <h3>150+ Mapas Mentais</h3>
+          <p>Principais conteúdos de Enfermagem organizados em <strong>revisões visuais rápidas</strong>.</p>
+        </article>
+        <article class="deliverable">
+          <div class="deliverable-icon">📝</div>
+          <h3>500 Questões</h3>
+          <p><strong>200 de SUS comentadas</strong> + 300 de conhecimentos específicos, com gabarito.</p>
+        </article>
+        <article class="deliverable">
+          <div class="deliverable-icon">🃏</div>
+          <h3>300 Flashcards</h3>
+          <p>Revisões curtas para usar no intervalo, transporte ou nos minutos antes da prova.</p>
+        </article>
+        <article class="deliverable">
+          <div class="deliverable-icon">🎯</div>
+          <h3>5 Simulados</h3>
+          <p>Treine o ritmo de prova, confira o gabarito e registre onde precisa melhorar.</p>
+        </article>
+        <article class="deliverable">
+          <div class="deliverable-icon">⚠️</div>
+          <h3>100 Pegadinhas</h3>
+          <p>Um guia direto com <strong>erros e confusões frequentes</strong> em provas de Enfermagem.</p>
+        </article>
+        <article class="deliverable">
+          <div class="deliverable-icon">📅</div>
+          <h3>Plano de Revisão</h3>
+          <p>Cronograma de 30 dias + roteiro de <strong>reta final de 7 dias</strong>.</p>
+        </article>
+      </div>
+
+      <div class="guides-card">
+        <h3>+ Guias rápidos incluídos no Pack</h3>
+        <div class="guide-chips">
+          <span class="guide-chip">SUS Descomplicado</span>
+          <span class="guide-chip">Cálculos & Diluições</span>
+          <span class="guide-chip">Imunização</span>
+          <span class="guide-chip">Rede de Frio</span>
+          <span class="guide-chip">Biossegurança</span>
+          <span class="guide-chip">IRAS & CME</span>
+          <span class="guide-chip">Urgência & Emergência</span>
+          <span class="guide-chip">100 Termos Técnicos</span>
+        </div>
+      </div>
+
+      <div class="bonus-card">
+        <span class="bonus-label">Bônus da edição atual</span>
+        <h3>Reta Final SES-TO 2026 — FGV</h3>
+        <p>Um complemento específico para quem está na preparação do edital atual: checklist de revisão, foco nos conteúdos e material para a reta final.</p>
+        <div class="bonus-meta">
+          <span>FGV</span>
+          <span>Prova 01/11/2026</span>
+          <span>Atualizado 2026</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <span class="section-kicker">SIMPLES DE USAR</span>
+      <h2 class="section-title">Você não precisa estudar mais. Precisa revisar melhor.</h2>
+      <div class="method">
+        <article class="method-item">
+          <div class="method-num">1</div>
+          <div><h3>Revise</h3><p>Use os mapas, flashcards e guias para recuperar os pontos principais sem voltar para centenas de páginas.</p></div>
+        </article>
+        <article class="method-item">
+          <div class="method-num">2</div>
+          <div><h3>Resolva</h3><p>Parta para as questões e descubra rapidamente quais assuntos ainda estão te fazendo perder pontos.</p></div>
+        </article>
+        <article class="method-item">
+          <div class="method-num">3</div>
+          <div><h3>Simule</h3><p>Use os simulados e o caderno de erros para direcionar os últimos dias de preparação.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="offer" id="oferta">
+      <div class="offer-box">
+        <div class="offer-top">
+          <span class="offer-badge">PACK COMPLETO</span>
+          <span class="updated">● ATUALIZADO 2026</span>
+        </div>
+        <h2>Enfermagem na Prova</h2>
+        <ul class="offer-list">
+          <li>150+ mapas mentais de Enfermagem</li>
+          <li>500 questões com gabarito e blocos comentados</li>
+          <li>300 flashcards + 100 termos técnicos</li>
+          <li>5 simulados + caderno de erros</li>
+          <li>Guias de SUS, cálculos, imunização, biossegurança e urgência</li>
+          <li>Cronograma 30 dias + reta final 7 dias</li>
+          <li>Bônus atual: Reta Final SES-TO 2026 — FGV</li>
+        </ul>
+
+        <div class="price-label">Acesso ao pack completo por</div>
+        <div class="price"><small>R$</small><strong>19</strong><em>,90</em></div>
+        <div class="pay-note">Pagamento único • material digital • acesso após confirmação</div>
+
+        <a class="primary-cta pulse js-buy" href="#" role="button">QUERO ACESSAR POR R$19,90</a>
+        <div class="secure-row"><span>🔒 Compra segura</span><span>⚡ Acesso rápido</span><span>📱 No celular</span></div>
+      </div>
+
+      <div class="faq">
+        <span class="section-kicker" style="margin-top:24px">DÚVIDAS RÁPIDAS</span>
+        <h2 class="section-title" style="font-size:20px">Antes de acessar</h2>
+
+        <details>
+          <summary>Este material serve só para o SES-TO?</summary>
+          <p>Não. O Pack principal foi criado para revisão de conteúdos recorrentes em concursos e processos seletivos de Enfermagem. A edição atual inclui um bônus específico de reta final para o SES-TO 2026.</p>
+        </details>
+        <details>
+          <summary>Consigo estudar pelo celular?</summary>
+          <p>Sim. A experiência foi pensada para acesso digital e revisão rápida pelo celular, além de permitir uso em tablet ou computador quando disponível.</p>
+        </details>
+        <details>
+          <summary>É curso em vídeo?</summary>
+          <p>Não. A proposta principal é revisão prática: mapas mentais, questões, simulados, flashcards, guias rápidos e materiais de apoio.</p>
+        </details>
+        <details>
+          <summary>O material garante aprovação?</summary>
+          <p>Não existe garantia de aprovação em concurso. O objetivo do Pack é organizar a revisão e oferecer ferramentas para treinar e identificar pontos que precisam de reforço.</p>
+        </details>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-brand">Enfermagem na Prova</div>
+      <p>Material independente de preparação e revisão. Não possui vínculo oficial com bancas organizadoras, órgãos públicos ou concursos citados.</p>
+      <div class="footer-links">
+        <a href="privacidade.html">Política de Privacidade</a>
+        <a href="termos.html">Termos de Uso</a>
+      </div>
+    </footer>
+  </main>
+
+  <div class="sticky" aria-label="Acesso rápido à oferta">
+    <a class="primary-cta pulse js-buy" href="#">QUERO O PACK • R$19,90</a>
+  </div>
+
+  <script>
+    /* =========================================================
+       CONFIGURAÇÃO RÁPIDA
+       1) Cole o link do checkout abaixo.
+       2) Para outra campanha/estado, altere BONUS_CONFIG.
+       3) Substitua o bloco .video-wrap pelo player 9:16.
+    ========================================================== */
+    const CHECKOUT_URL = ""; // Ex.: https://pay.cakto.com.br/SEU_LINK
+
+    const BONUS_CONFIG = {
+      label: "SES-TO 2026",
+      examDate: "2026-11-01T00:00:00-03:00"
+    };
+
+    function updateCountdown() {
+      const el = document.getElementById("countdownText");
+      if (!el) return;
+      const now = new Date();
+      const exam = new Date(BONUS_CONFIG.examDate);
+      const diff = exam.getTime() - now.getTime();
+      const days = Math.ceil(diff / 86400000);
+
+      if (days > 1) el.textContent = `FALTAM ${days} DIAS PARA A PROVA`;
+      else if (days === 1) el.textContent = "A PROVA É AMANHÃ";
+      else if (days === 0) el.textContent = "DIA DA PROVA";
+      else el.textContent = "EDIÇÃO 2026";
+    }
+
+    function trackCTA(origin) {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: "cta_click", cta_origin: origin });
+      if (typeof window.fbq === "function") {
+        window.fbq("trackCustom", "CTA_Click", { origin });
+      }
+    }
+
+    document.querySelectorAll(".js-buy").forEach((button, index) => {
+      button.addEventListener("click", (event) => {
+        trackCTA(index === 0 ? "offer" : "sticky");
+        if (!CHECKOUT_URL) {
+          event.preventDefault();
+          document.getElementById("oferta")?.scrollIntoView({ behavior: "smooth", block: "center" });
+          console.warn("Checkout ainda não configurado. Defina CHECKOUT_URL no final do index.html.");
+          return;
+        }
+        button.href = CHECKOUT_URL;
+      });
+    });
+
+    document.querySelectorAll(".js-cta").forEach((button) => {
+      button.addEventListener("click", () => trackCTA("hero"));
+    });
+
+    updateCountdown();
+  </script>
+</body>
+</html>
