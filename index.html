@@ -14,14 +14,14 @@
   <script>
     (async()=>{
       try{
-        let html=await fetch('/legacy.html?v=20260909',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('Falha ao carregar página');return r.text()});
+        let html=await fetch('https://raw.githubusercontent.com/MindLone/enfermagem-na-prova/main/legacy.html?v=20260909b',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('Falha ao carregar página');return r.text()});
         html=html.replaceAll('Enfermagem na Prova','Revisão de Enfermagem');
         html=html.replaceAll('Pack Enfermagem na Prova','Pack Revisão de Enfermagem');
         html=html.replaceAll('PACK ENFERMAGEM PARA CONCURSOS 2026','REVISÃO DE ENFERMAGEM • CONCURSOS 2026');
         html=html.replaceAll('QUERO O PACK ENFERMAGEM NA PROVA','QUERO A REVISÃO DE ENFERMAGEM 2026');
         html=html.replaceAll('Pack Concursos 2026','Concursos 2026');
         html=html.replace('content="Revisão de Enfermagem — Pack de revisão para concursos de Enfermagem 2026 com mapas mentais, questões, simulados, flashcards e guias rápidos."','content="Revisão de Enfermagem — Concursos 2026. Pack digital com mapas mentais, questões, simulados, flashcards e guias rápidos para concursos de Enfermagem."');
-        html=html.replace('</head>',`<link rel="canonical" href="https://revisaoenfermagem.shop/"><meta property="og:title" content="Revisão de Enfermagem | Concursos 2026"><meta property="og:description" content="Mapas mentais, questões, simulados e materiais de revisão para concursos de Enfermagem em 2026."><meta property="og:url" content="https://revisaoenfermagem.shop/"><style>.logo{width:min(680px,88vw)!important;height:245px!important;margin:0 auto 15px!important;background:url('/assets/logo-revisao-enfermagem-2026-transparente.webp?v=20260909b') center/contain no-repeat!important;display:block!important}.logo>*{display:none!important}@media(max-width:560px){.logo{height:145px!important;width:96vw!important;margin-bottom:8px!important}}</style></head>`);
+        html=html.replace('</head>',`<link rel="canonical" href="https://revisaoenfermagem.shop/"><meta property="og:title" content="Revisão de Enfermagem | Concursos 2026"><meta property="og:description" content="Mapas mentais, questões, simulados e materiais de revisão para concursos de Enfermagem em 2026."><meta property="og:url" content="https://revisaoenfermagem.shop/"><style>.logo{width:min(680px,88vw)!important;height:245px!important;margin:0 auto 15px!important;background:url('https://raw.githubusercontent.com/MindLone/enfermagem-na-prova/main/assets/logo-revisao-enfermagem-2026-transparente.webp?v=20260909b') center/contain no-repeat!important;display:block!important}.logo>*{display:none!important}@media(max-width:560px){.logo{height:145px!important;width:96vw!important;margin-bottom:8px!important}}</style></head>`);
         html=html.replace('</footer>','<div style="margin-top:5px;color:#c0d1dc">revisaoenfermagem.shop</div></footer>');
         document.open();document.write(html);document.close();
       }catch(err){document.body.innerHTML='<div class="loading"><div><b>Revisão de Enfermagem</b><br><small>Não foi possível carregar a página. Atualize e tente novamente.</small></div></div>';console.error(err)}
