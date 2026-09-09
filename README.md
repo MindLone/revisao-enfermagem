@@ -2,7 +2,11 @@
 
 Landing page do **Revisão de Enfermagem — Concursos 2026**, um pack digital de revisão para concursos e processos seletivos de Enfermagem.
 
-Domínio planejado: **revisaoenfermagem.shop**
+## Links do projeto
+
+- **Site em produção (Vercel):** https://revisao-enfermagem-mindlones-projects.vercel.app
+- **Repositório GitHub:** https://github.com/MindLone/revisao-enfermagem
+- **Domínio oficial planejado:** https://revisaoenfermagem.shop
 
 ## Estrutura atual da oferta
 
@@ -37,7 +41,8 @@ A identidade usa principalmente:
 - degradês azul-verde na logotipo;
 - laranja apenas em pequenos destaques quando necessário.
 
-A logotipo oficial está em `assets/logo-revisao-enfermagem-2026.webp`.
+A logotipo oficial está em `assets/logo-revisao-enfermagem-2026-transparente.png`.
+O favicon principal está em `favicon.svg`.
 
 ## Site
 
