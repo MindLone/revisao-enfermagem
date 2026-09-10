@@ -1,60 +1,231 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#075b4f">
-  <meta name="description" content="Revisão de Enfermagem — Concursos 2026. Pack digital com mapas mentais, questões, simulados, flashcards e guias rápidos para concursos de Enfermagem.">
-  <link rel="canonical" href="https://revisaoenfermagem.shop/">
-  <link rel="icon" href="https://raw.githubusercontent.com/MindLone/revisao-enfermagem/main/favicon.svg?v=20260910-title-ref" type="image/svg+xml">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#f7fbf9" />
+  <meta name="description" content="Revisão de Enfermagem para concursos 2026 com mapas mentais, flashcards, questões, simulados e guias de revisão." />
+  <link rel="canonical" href="https://revisaoenfermagem.shop/" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preload" href="/assets/logo-revisao-enfermagem-2026-transparente.png" as="image" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="/script.js" defer></script>
   <title>Revisão de Enfermagem | Concursos 2026</title>
-  <style>body{margin:0;font-family:Arial,sans-serif;background:#fff;color:#17324d}.loading{min-height:100vh;display:grid;place-items:center;text-align:center;padding:24px}.loading b{color:#06705f}</style>
 </head>
 <body>
-  <div class="loading"><div><b>Revisão de Enfermagem</b><br><small>Carregando…</small></div></div>
-  <script>
-    (async()=>{
-      try{
-        let html=await fetch('https://raw.githubusercontent.com/MindLone/revisao-enfermagem/main/legacy.html?v=20260910-title-ref',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('Falha ao carregar página');return r.text()});
-        html=html.replaceAll('Enfermagem na Prova','Revisão de Enfermagem');
-        html=html.replaceAll('Pack Enfermagem na Prova','Pack Revisão de Enfermagem');
-        html=html.replaceAll('QUERO O PACK ENFERMAGEM NA PROVA','QUERO A REVISÃO DE ENFERMAGEM 2026');
-        html=html.replaceAll('Pack Concursos 2026','Concursos 2026');
-        html=html.replace(/<div class="notice">[\s\S]*?<\/div>/,'<div class="notice">MATERIAL ATUALIZADO 2026</div>');
-        html=html.replace('<div class="hero-badge">Revisão prática para concursos</div>','');
+  <div class="promo-bar" role="status">
+    <span class="promo-dot" aria-hidden="true"></span>
+    <p>MATERIAL ATUALIZADO 2026</p>
+  </div>
 
-        const provaHero=new Date('2026-11-01T00:00:00-03:00');
-        const agoraHero=new Date();
-        const diasHero=Math.max(0,Math.ceil((provaHero-agoraHero)/86400000));
-        const urgenciaHero=diasHero>1?`FALTAM ${diasHero} DIAS PARA A PROVA • 01/11/2026`:diasHero===1?'A PROVA É AMANHÃ • 01/11/2026':diasHero===0?'É DIA DE PROVA • 01/11/2026':'PROVA • 01/11/2026';
-        html=html.replace('<h1>O Pack que faltava para você <span class="g">revisar Enfermagem</span> e chegar mais preparado <span class="c">na prova.</span></h1>',`<h1 class="reference-title"><span class="ref-dark">Mapas Mentais, Questões</span><br><span class="ref-highlight">e Simulados para Concursos</span><br><span class="ref-highlight ref-last">de Enfermagem</span></h1><div class="hero-urgency">${urgenciaHero}</div>`);
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <img class="hero-logo" src="/assets/logo-revisao-enfermagem-2026-transparente.png" alt="Revisão de Enfermagem — Concursos 2026" width="900" height="900" fetchpriority="high" />
+          <p class="eyebrow">REVISÃO DIRETA PARA CONCURSOS DE ENFERMAGEM</p>
+          <h1 id="hero-title"><span class="highlight">Mapas mentais, questões e simulados</span> para revisar Enfermagem.</h1>
+          <p class="hero-subtitle">Materiais organizados para você revisar os principais pontos, praticar com questões e chegar à prova com uma rotina de estudo mais objetiva.</p>
+          <div class="hero-meta" aria-label="Informações principais">
+            <span class="meta-pill">A partir de R$ 19,90</span>
+            <span class="meta-pill">Acesso pelo celular</span>
+            <span class="meta-pill urgent" data-exam-countdown>SES-TO • PROVA 01/11/2026</span>
+          </div>
+          <a class="cta cta-primary" href="#ofertas">QUERO VER OS PACOTES <span aria-hidden="true">→</span></a>
+          <p class="trust-copy">Material digital de revisão • escolha entre acesso de 5 meses ou acesso vitalício.</p>
+        </div>
 
-        html=html.replace('content="Revisão de Enfermagem — Pack de revisão para concursos de Enfermagem 2026 com mapas mentais, questões, simulados, flashcards e guias rápidos."','content="Revisão de Enfermagem — Concursos 2026. Pack digital com mapas mentais, questões, simulados, flashcards e guias rápidos para concursos de Enfermagem."');
-        html=html.replace('</head>',`<link rel="canonical" href="https://revisaoenfermagem.shop/"><link rel="icon" href="https://raw.githubusercontent.com/MindLone/revisao-enfermagem/main/favicon.svg?v=20260910-title-ref" type="image/svg+xml"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap" rel="stylesheet"><meta property="og:title" content="Revisão de Enfermagem | Concursos 2026"><meta property="og:description" content="Mapas mentais, questões, simulados e materiais de revisão para concursos de Enfermagem em 2026."><meta property="og:url" content="https://revisaoenfermagem.shop/"><style>
-.logo{width:205px!important;max-width:48vw!important;height:76px!important;margin:0 auto 12px!important;background:url('https://raw.githubusercontent.com/MindLone/revisao-enfermagem/main/assets/logo-revisao-enfermagem-2026-transparente.png?v=20260910-title-ref') center center/contain no-repeat!important;display:block!important;float:none!important;position:relative!important;left:0!important;right:0!important;transform:none!important}.logo>*{display:none!important}
-body{font-size:16px!important}
-.topline{display:none!important}
-.notice{font-size:13px!important;line-height:1.45!important;padding:10px 14px!important;background:linear-gradient(90deg,#075b4f 0%,#08777a 48%,#0a4a72 100%)!important;color:#fff!important;font-weight:800!important;letter-spacing:.055em!important;box-shadow:0 1px 0 rgba(0,0,0,.06)!important}
-.kicker{font-size:13px!important;line-height:1.4!important}
-.title{font-size:clamp(30px,4.6vw,44px)!important;line-height:1.12!important}
-.desc{font-size:16px!important;line-height:1.7!important}
-.btn{font-size:15px!important;line-height:1.3!important;min-height:54px!important;padding:15px 22px!important}
-.micro{font-size:12px!important;line-height:1.5!important}
-.hero{padding-top:20px!important}
-.reference-title{max-width:920px!important;margin:3px auto 0!important;font-family:Montserrat,Poppins,Arial,sans-serif!important;font-size:clamp(35px,5.15vw,58px)!important;line-height:1.11!important;letter-spacing:-2.25px!important;font-weight:900!important;color:#061b36!important;text-align:center!important}
-.reference-title .ref-dark{color:#061b36!important}
-.reference-title .ref-highlight{display:inline;box-decoration-break:clone;-webkit-box-decoration-break:clone;background:#dff8ec;color:#006f59!important;padding:.02em .10em .07em;border-radius:1px;box-shadow:0 2px 0 rgba(0,71,61,.08)}
-.reference-title .ref-last{line-height:1.22}
-.hero-urgency{display:inline-flex;align-items:center;justify-content:center;max-width:100%;margin:17px auto 0;padding:8px 14px;border-radius:999px;background:linear-gradient(90deg,#07866f 0%,#0a8093 52%,#0a4c78 100%);color:#fff;font-family:Montserrat,Poppins,sans-serif;font-size:12.5px;line-height:1.3;font-weight:900;letter-spacing:.025em;box-shadow:0 7px 18px rgba(8,91,101,.16)}
-.hero p{font-size:16px!important;line-height:1.7!important}
-.hero-tags span{font-size:12.5px!important;line-height:1.35!important;padding:7px 9px!important}
-.paper-title{font-size:28px!important}.mini-note{font-size:10px!important;line-height:1.4!important}.mini-note b{font-size:14px!important}.float-card{font-size:12px!important;line-height:1.4!important}.inside-label{font-size:12px!important;line-height:1.35!important}.video-content strong{font-size:18px!important}.video-content small{font-size:13px!important;line-height:1.55!important}.sheet .hl{font-size:17px!important}.material-body h3{font-size:17px!important;line-height:1.35!important}.material-body p{font-size:14.5px!important;line-height:1.65!important}.material-body .tag{font-size:11.5px!important;line-height:1.3!important;padding:5px 8px!important}.guide{font-size:13.5px!important;line-height:1.5!important}.guide b{font-size:15px!important;line-height:1.35!important}.painbox .quote{font-size:14.5px!important;line-height:1.7!important}.bonus-copy p{font-size:15px!important;line-height:1.7!important}.bonus h4{font-size:15px!important;line-height:1.35!important}.bonus p{font-size:13.5px!important;line-height:1.6!important}.bonus .ribbon{font-size:10px!important}.offer-head .small{font-size:12px!important}.offer-head h2{font-size:30px!important}.offer-list li{font-size:14.5px!important;line-height:1.55!important;padding-left:25px!important}.offer-list li:before{font-size:11px!important}.old{font-size:13.5px!important}.pay{font-size:12px!important;line-height:1.4!important}.secure{font-size:11.5px!important;line-height:1.45!important}.guarantee h3{font-size:22px!important;line-height:1.3!important}.guarantee p{font-size:14px!important;line-height:1.7!important}.faq summary{font-size:14.5px!important;line-height:1.5!important;padding-top:15px!important;padding-bottom:15px!important}.faq details p{font-size:14px!important;line-height:1.7!important}footer{font-size:12px!important;line-height:1.7!important}footer .footer-logo{font-size:14px!important}
-@media(max-width:560px){.logo{width:158px!important;max-width:50vw!important;height:60px!important;margin:0 auto 11px!important}.notice{font-size:12.5px!important;line-height:1.4!important;padding:9px 12px!important}.hero{padding-top:16px!important}.reference-title{max-width:370px!important;margin:2px auto 0!important;font-size:31.5px!important;line-height:1.14!important;letter-spacing:-1.55px!important}.reference-title .ref-highlight{padding:.01em .08em .06em!important}.hero-urgency{margin-top:15px!important;padding:8px 12px!important;font-size:12px!important;line-height:1.3!important}.hero p{font-size:16.5px!important;line-height:1.72!important}.hero-tags span{font-size:12.5px!important}.title{font-size:30px!important;line-height:1.14!important;letter-spacing:-.9px!important}.desc{font-size:16px!important;line-height:1.72!important}.kicker{font-size:12.5px!important}.btn{font-size:15px!important;line-height:1.35!important;min-height:56px!important;padding:16px 18px!important}.micro{font-size:12px!important}.paper-title{font-size:23px!important}.mini-note{font-size:8.2px!important;line-height:1.38!important}.mini-note b{font-size:11.5px!important}.inside-label{font-size:12px!important}.video-content small{font-size:13px!important}.material-body h3{font-size:17px!important}.material-body p{font-size:15px!important}.material-body .tag{font-size:11.5px!important}.guide{font-size:13.5px!important}.guide b{font-size:15px!important}.painbox .quote{font-size:14.5px!important}.bonus-copy p{font-size:15px!important}.bonus h4{font-size:15px!important}.bonus p{font-size:14px!important}.offer-head .small{font-size:12px!important}.offer-list li{font-size:14.5px!important}.old{font-size:13.5px!important}.pay{font-size:12.5px!important}.secure{font-size:11.5px!important}.guarantee p{font-size:14.5px!important}.faq summary{font-size:15px!important}.faq details p{font-size:14.5px!important}footer{font-size:12px!important}}
-</style></head>`);
-        html=html.replace('</footer>','<div style="margin-top:5px;color:#c0d1dc">revisaoenfermagem.shop</div></footer>');
-        document.open();document.write(html);document.close();
-      }catch(err){document.body.innerHTML='<div class="loading"><div><b>Revisão de Enfermagem</b><br><small>Não foi possível carregar a página. Atualize e tente novamente.</small></div></div>';console.error(err)}
-    })();
-  </script>
+        <div class="hero-visual" aria-label="Prévia ilustrativa dos materiais do pack">
+          <div class="hero-glow" aria-hidden="true"></div>
+          <div class="material-stack" data-asset-slot="hero-pack">
+            <article class="study-card card-a"><small>REVISÃO VISUAL</small><h3>Mapas Mentais</h3><div class="study-lines"><span></span><span></span><span></span><span></span><span></span></div></article>
+            <article class="study-card card-b"><small>PRÁTICA</small><h3>Questões</h3><div class="study-lines"><span></span><span></span><span></span><span></span><span></span></div></article>
+            <article class="study-card card-c"><small>RETA FINAL</small><h3>Simulados</h3><div class="study-lines"><span></span><span></span><span></span><span></span><span></span></div></article>
+            <div class="hero-stat stat-a"><strong>200 mapas</strong><span>no pacote completo</span></div>
+            <div class="hero-stat stat-b"><strong>10 simulados</strong><span>no pacote completo</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section preview" aria-labelledby="preview-title">
+      <div class="container preview-shell">
+        <div class="phone-demo" data-asset-slot="video-vertical" aria-label="Espaço preparado para vídeo vertical do produto">
+          <div class="phone-screen">
+            <div class="play" aria-hidden="true"></div>
+            <strong>VEJA O MATERIAL POR DENTRO</strong>
+            <span>Este espaço já está preparado para o vídeo 9:16 que será adicionado depois.</span>
+          </div>
+        </div>
+        <div class="preview-copy">
+          <p class="eyebrow">VEJA COMO A REVISÃO FOI ORGANIZADA</p>
+          <h2 id="preview-title">Menos material espalhado. Mais clareza sobre o que revisar.</h2>
+          <p>O pack reúne <b>mapas mentais, flashcards, questões e simulados</b> em uma estrutura simples. Você revisa o conteúdo, pratica e identifica rapidamente onde ainda precisa reforçar.</p>
+          <a class="text-link" href="#materiais">VER O QUE ESTÁ INCLUÍDO →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section materials" id="materiais" aria-labelledby="materials-title">
+      <div class="container">
+        <div class="section-heading center">
+          <p class="eyebrow">TUDO COM UMA FUNÇÃO CLARA</p>
+          <h2 id="materials-title">O essencial para revisar, praticar e testar sua preparação.</h2>
+          <p>Sem uma biblioteca gigante só para parecer maior. Cada tipo de material entra porque ajuda em uma etapa específica da revisão.</p>
+        </div>
+
+        <div class="material-grid">
+          <article class="material-item"><div class="material-icon">M</div><h3>Mapas Mentais</h3><p>Revisão visual dos pontos mais importantes para recuperar conteúdo com rapidez.</p></article>
+          <article class="material-item"><div class="material-icon">F</div><h3>Flashcards</h3><p>Cards curtos para repetir conceitos, definições e informações que costumam cair em prova.</p></article>
+          <article class="material-item"><div class="material-icon">Q</div><h3>Questões</h3><p>Treino direcionado para transformar revisão em prática e identificar pontos fracos.</p></article>
+          <article class="material-item"><div class="material-icon">S</div><h3>Simulados</h3><p>Blocos de prova para testar ritmo, revisar erros e se preparar para o formato do concurso.</p></article>
+          <article class="material-item"><div class="material-icon">+</div><h3>Guias Extras</h3><p>No Pacote Completo, você recebe materiais complementares para temas específicos.</p></article>
+        </div>
+
+        <div class="topic-strip">
+          <p class="eyebrow">TEMAS DE REVISÃO</p>
+          <div class="topic-cloud" aria-label="Temas abordados nos materiais">
+            <span>SUS</span><span>Cálculos</span><span>Medicamentos</span><span>Biossegurança</span><span>IRAS</span><span>CME</span><span>Ética</span><span>Urgência</span><span>Imunização</span><span>Fundamentos</span><span>Legislação</span><span>Termos Técnicos</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section why" aria-labelledby="why-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">FEITO PARA UMA ROTINA REAL DE ESTUDOS</p>
+          <h2 id="why-title">Uma sequência simples para não transformar revisão em bagunça.</h2>
+        </div>
+        <div class="why-grid">
+          <article><span>01</span><h3>Revise</h3><p>Use mapas mentais e flashcards para recuperar os pontos principais antes de praticar.</p></article>
+          <article><span>02</span><h3>Resolva</h3><p>Parta para as questões e simulados para testar o que realmente ficou.</p></article>
+          <article><span>03</span><h3>Corrija</h3><p>Identifique os erros, volte ao assunto necessário e repita a revisão com mais foco.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pricing" id="ofertas" aria-labelledby="pricing-title">
+      <div class="container">
+        <div class="section-heading center">
+          <p class="eyebrow">ESCOLHA O NÍVEL DE ACESSO</p>
+          <h2 id="pricing-title">Comece com o essencial ou leve o pacote completo.</h2>
+          <p>Os dois planos dão acesso ao material principal. O Completo amplia a quantidade de exercícios, libera os bônus e mantém o acesso vitalício.</p>
+        </div>
+
+        <div class="price-grid">
+          <article class="price-card basic">
+            <div class="plan-head">
+              <p class="plan-kicker">OPÇÃO ESSENCIAL</p>
+              <h3>Pacote Básico</h3>
+              <p>Para quem quer começar com os principais materiais de revisão.</p>
+            </div>
+
+            <div class="plan-visual" aria-hidden="true">
+              <div class="mini-pack"><div class="mini-book">MAPAS</div><div class="mini-book">QUESTÕES</div><div class="mini-book">SIMULADOS</div></div>
+            </div>
+
+            <ul class="feature-list">
+              <li>Acesso à área de membros por 5 meses</li>
+              <li>150 Mapas Mentais</li>
+              <li>200 Flashcards</li>
+              <li>150 Questões</li>
+              <li>5 Simulados</li>
+            </ul>
+
+            <div class="price-row"><div><span>Pagamento único</span><strong><small>R$</small> 19,90</strong></div></div>
+            <a class="cta cta-secondary" href="#" data-checkout="basico">QUERO O PACOTE BÁSICO</a>
+            <p class="access-note">Acesso digital • sem mensalidade</p>
+          </article>
+
+          <article class="price-card complete">
+            <span class="value-badge">MELHOR ESCOLHA</span>
+            <div class="plan-head">
+              <p class="plan-kicker">EXPERIÊNCIA COMPLETA</p>
+              <h3>Pacote Completo</h3>
+              <p>Mais conteúdo, bônus exclusivos e acesso vitalício ao material.</p>
+            </div>
+
+            <div class="plan-visual" aria-hidden="true">
+              <div class="mini-pack"><div class="mini-book">MAPAS</div><div class="mini-book">BÔNUS</div><div class="mini-book">SIMULADOS</div></div>
+            </div>
+
+            <ul class="feature-list">
+              <li><strong>Acesso vitalício</strong></li>
+              <li>07 dias de garantia</li>
+              <li>Suporte 24 horas</li>
+              <li>Atualizações mensais</li>
+              <li>200 Mapas Mentais</li>
+              <li>200 Flashcards</li>
+              <li>250 Questões</li>
+              <li>10 Simulados</li>
+            </ul>
+
+            <div class="bonus-panel">
+              <div class="bonus-title"><span>+</span><h4>BÔNUS EXCLUSIVOS DO PACOTE COMPLETO</h4></div>
+              <div class="bonus-list">
+                <div class="bonus-item"><strong>Guia SUS Resumido</strong><p>Revisão direta dos principais pontos do Sistema Único de Saúde.</p></div>
+                <div class="bonus-item"><strong>💊 Guia de Cálculos e Medicamentos</strong><p>Regra de três, diluições, gotejamento, conversões e pontos essenciais para questões.</p></div>
+                <div class="bonus-item"><strong>🦠 Biossegurança, IRAS e CME</strong><p>Precauções, limpeza, desinfecção, esterilização e controle de infecções.</p></div>
+                <div class="bonus-item"><strong>🩺 100 Termos Técnicos</strong><p>Cards de consulta rápida com termos frequentes na prática e em questões.</p></div>
+                <div class="bonus-item"><strong>🎯 Reta Final SES-TO 2026 — FGV</strong><p>Checklist e direcionamento específico para a preparação da prova prevista para 01/11/2026.</p></div>
+              </div>
+            </div>
+
+            <div class="compare-note">Por apenas R$ 7,10 a mais que o Básico, você leva o acesso vitalício, mais questões, mais simulados e todos os bônus.</div>
+            <div class="price-row"><div><span>Pagamento único</span><strong><small>R$</small> 27,00</strong></div></div>
+            <a class="cta cta-primary" href="#" data-checkout="completo">QUERO O PACOTE COMPLETO</a>
+            <p class="access-note">Acesso vitalício • garantia de 7 dias • atualizações mensais</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section guarantee" aria-labelledby="guarantee-title">
+      <div class="container">
+        <div class="guarantee-card">
+          <div class="guarantee-seal" aria-hidden="true"><strong>7</strong><span>DIAS</span></div>
+          <div>
+            <p class="eyebrow">GARANTIA DO PACOTE COMPLETO</p>
+            <h2 id="guarantee-title">Você tem 7 dias para conhecer o material.</h2>
+            <p>A garantia de 7 dias faz parte do Pacote Completo. As condições de reembolso seguem as regras apresentadas no checkout e na plataforma de pagamento.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-heading center">
+          <p class="eyebrow">SEM LETRAS MIÚDAS</p>
+          <h2 id="faq-title">Dúvidas frequentes</h2>
+        </div>
+
+        <div class="faq-list">
+          <details><summary>Qual é a diferença entre o Pacote Básico e o Completo?<span>+</span></summary><p>O Básico tem acesso por 5 meses e inclui 150 mapas mentais, 200 flashcards, 150 questões e 5 simulados. O Completo tem acesso vitalício, 200 mapas mentais, 200 flashcards, 250 questões, 10 simulados, atualizações mensais, suporte 24 horas e todos os bônus exclusivos.</p></details>
+          <details><summary>Por quanto tempo tenho acesso?<span>+</span></summary><p>No Pacote Básico, o acesso é de 5 meses. No Pacote Completo, o acesso é vitalício.</p></details>
+          <details><summary>O material serve somente para o SES-TO?<span>+</span></summary><p>Não. O conteúdo principal é voltado à revisão para concursos de Enfermagem. O Pacote Completo inclui também um material específico de reta final para o SES-TO 2026 — FGV.</p></details>
+          <details><summary>Consigo estudar pelo celular?<span>+</span></summary><p>Sim. A estrutura foi pensada para acesso digital e uso pelo celular. Alguns materiais também podem ser utilizados em computador ou tablet.</p></details>
+          <details><summary>O que vem no material principal?<span>+</span></summary><p>Mapas mentais, flashcards, questões e simulados. O Pacote Completo acrescenta mais quantidade de exercícios e os guias bônus.</p></details>
+          <details><summary>O Pacote Completo recebe atualizações?<span>+</span></summary><p>Sim. O Pacote Completo inclui atualizações mensais conforme a proposta apresentada na oferta.</p></details>
+          <details><summary>Tem garantia?<span>+</span></summary><p>O Pacote Completo possui garantia de 7 dias, conforme as condições exibidas no checkout.</p></details>
+          <details><summary>O material garante aprovação?<span>+</span></summary><p>Não. O objetivo do material é apoiar a revisão, a prática com questões e a organização do estudo. O resultado em concurso depende de diversos fatores individuais e da preparação do candidato.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Revisão de Enfermagem</div>
+          <p>Material digital independente de revisão e preparação para concursos de Enfermagem.</p>
+        </div>
+        <div class="footer-links"><a href="/privacidade">Política de Privacidade</a><a href="/termos">Termos de Uso</a></div>
+      </div>
+      <div class="footer-note">Revisão de Enfermagem não possui vínculo oficial com bancas organizadoras, órgãos públicos ou concursos citados. © 2026 Revisão de Enfermagem.</div>
+    </div>
+  </footer>
 </body>
 </html>
