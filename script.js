@@ -29,14 +29,13 @@
 
   updateDate();
 
-  const heroCta = document.querySelector('.hero .cta-reference');
-  if (heroCta) {
+  document.querySelectorAll('.hero .cta-reference').forEach((heroCta) => {
     heroCta.innerHTML = `
       <svg class="cta-zap" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
       </svg>
       <span class="cta-label">SIM! QUERO VER OS PACOTES</span>`;
-  }
+  });
 
   const footerLinks = document.querySelector('.footer-links');
   if (footerLinks && !footerLinks.querySelector('a[href="mailto:bibliotecasaudebs@gmail.com"]')) {
