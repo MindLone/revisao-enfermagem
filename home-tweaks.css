@@ -125,31 +125,35 @@
 }
 
 .faq{
-  background:linear-gradient(140deg,#061a33 0%,#073f66 58%,#075d57 100%);
+  background:
+    radial-gradient(ellipse at 50% 108%,rgba(5,89,91,.30) 0%,rgba(6,55,94,.20) 36%,transparent 70%),
+    linear-gradient(180deg,#030914 0%,#051225 52%,#061a2b 100%);
 }
 
 .faq summary span{
-  color:#63d8ff;
+  color:#57c9f4;
 }
 
 .faq details p{
-  color:#bed4e1;
+  color:#b6c9d6;
 }
 
 .site-footer{
-  background:linear-gradient(145deg,#04111f 0%,#062b49 60%,#06413d 100%);
+  background:
+    radial-gradient(ellipse at 50% 112%,rgba(5,56,67,.20) 0%,rgba(4,31,52,.14) 40%,transparent 72%),
+    linear-gradient(180deg,#01050c 0%,#020a13 56%,#04101a 100%);
 }
 
 .footer-grid p{
-  color:#b8cbd7;
+  color:#aebfca;
 }
 
 .footer-links a{
-  color:#e4f1f7;
+  color:#dceaf1;
 }
 
 .footer-note{
-  color:#8fa8b7;
+  color:#7f96a4;
 }
 
 @media(min-width:940px){
@@ -180,7 +184,9 @@
   }
 
   .hero h1{
-    font-size:38px;
+    max-width:340px;
+    margin-inline:auto;
+    font-size:42px;
   }
 
   .hero-grid{
@@ -211,6 +217,7 @@
 
 @media(max-width:390px){
   .hero h1{
-    font-size:35px;
+    max-width:330px;
+    font-size:39px;
   }
 }
