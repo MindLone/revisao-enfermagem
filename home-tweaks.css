@@ -124,6 +124,11 @@
   margin:18px auto 0;
 }
 
+.guarantee-seal{
+  border-color:#1769d2;
+  color:#1769d2;
+}
+
 .faq{
   background:
     radial-gradient(ellipse at 50% 108%,rgba(5,89,91,.30) 0%,rgba(6,55,94,.20) 36%,transparent 70%),
