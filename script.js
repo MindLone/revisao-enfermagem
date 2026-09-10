@@ -38,7 +38,14 @@
       <span class="cta-label">SIM! QUERO GARANTIR MEU PACOTE AGORA</span>`;
   }
 
-  // Insira os links definitivos quando os checkouts estiverem prontos.
+  const footerLinks = document.querySelector('.footer-links');
+  if (footerLinks && !footerLinks.querySelector('a[href="mailto:bibliotecasaudebs@gmail.com"]')) {
+    const emailLink = document.createElement('a');
+    emailLink.href = 'mailto:bibliotecasaudebs@gmail.com';
+    emailLink.textContent = 'bibliotecasaudebs@gmail.com';
+    footerLinks.appendChild(emailLink);
+  }
+
   const CHECKOUTS = {
     basico: '',
     completo: ''
