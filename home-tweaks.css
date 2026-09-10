@@ -1,0 +1,149 @@
+/* Ajustes da primeira rodada de melhoria da home */
+.promo-bar{
+  gap:0;
+}
+
+.hero-countdown{
+  margin:0 0 12px;
+  color:#e66f12;
+  font-size:12px;
+  line-height:1.35;
+  font-weight:900;
+  letter-spacing:.085em;
+  text-transform:uppercase;
+}
+
+.hero .cta-reference{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  width:100%;
+  max-width:440px;
+  min-height:59px;
+  margin-top:23px;
+  padding:16px 24px;
+  border:1px solid #f39a18;
+  border-radius:10px;
+  color:#fff;
+  background:linear-gradient(180deg,#ffad22 0%,#f8890d 100%);
+  box-shadow:0 5px 0 #c96708,0 13px 27px rgba(198,103,8,.22);
+  text-shadow:0 1px 1px rgba(86,39,0,.2);
+  font-size:14px;
+  font-weight:900;
+  letter-spacing:.015em;
+  animation:ctaSoftPulse 2.15s ease-in-out infinite;
+}
+
+.hero .cta-reference::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:linear-gradient(105deg,transparent 26%,rgba(255,255,255,.18) 48%,transparent 70%);
+  transform:translateX(-120%);
+  animation:ctaSoftShine 3.7s ease-in-out infinite;
+}
+
+.hero .cta-reference:hover{
+  transform:translateY(-1px);
+  filter:brightness(1.03);
+  box-shadow:0 5px 0 #c96708,0 15px 31px rgba(198,103,8,.25);
+}
+
+@keyframes ctaSoftPulse{
+  0%,100%{transform:scale(1);filter:brightness(1);box-shadow:0 5px 0 #c96708,0 13px 27px rgba(198,103,8,.20)}
+  50%{transform:scale(1.012);filter:brightness(1.045);box-shadow:0 5px 0 #c96708,0 15px 31px rgba(198,103,8,.26)}
+}
+
+@keyframes ctaSoftShine{
+  0%,68%,100%{transform:translateX(-120%)}
+  82%{transform:translateX(120%)}
+}
+
+.preview{
+  padding-top:58px;
+  padding-bottom:62px;
+}
+
+.preview-shell.preview-shell-solo{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:22px;
+  text-align:center;
+}
+
+.preview-shell-solo .phone-demo{
+  width:min(330px,86vw);
+  margin:0 auto;
+  padding:4px;
+  border:1px solid transparent;
+  border-radius:11px;
+  background:linear-gradient(#0a1914,#0a1914) padding-box,linear-gradient(135deg,#0a7e62 0%,#24b88e 52%,#147f94 100%) border-box;
+  box-shadow:0 17px 38px rgba(6,64,49,.13);
+}
+
+.preview-shell-solo .phone-screen{
+  border-radius:7px;
+}
+
+.preview-shell-solo .text-link{
+  display:inline-block;
+  margin:0;
+  color:var(--green);
+  font-size:13px;
+  font-weight:900;
+  text-decoration:none;
+  border-bottom:1px solid #9cd8c4;
+  padding-bottom:4px;
+}
+
+@media(min-width:940px){
+  .hero .cta-reference{
+    width:auto;
+    min-width:315px;
+  }
+
+  .preview-shell.preview-shell-solo{
+    display:flex;
+    gap:24px;
+  }
+
+  .preview-shell-solo .phone-demo{
+    width:350px;
+  }
+}
+
+@media(max-width:560px){
+  .hero-countdown{
+    margin-bottom:10px;
+    font-size:11px;
+  }
+
+  .hero .cta-reference{
+    max-width:430px;
+    min-height:58px;
+    font-size:13.5px;
+  }
+
+  .preview{
+    padding-top:48px;
+    padding-bottom:52px;
+  }
+
+  .preview-shell-solo .phone-demo{
+    width:min(310px,86vw);
+  }
+
+  .preview-shell-solo .text-link{
+    font-size:12.5px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  .hero .cta-reference,
+  .hero .cta-reference::before{
+    animation:none;
+  }
+}
