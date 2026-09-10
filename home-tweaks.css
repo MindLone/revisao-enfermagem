@@ -179,6 +179,10 @@
     font-size:10.5px;
   }
 
+  .hero h1{
+    font-size:38px;
+  }
+
   .hero-grid{
     gap:26px;
   }
@@ -202,5 +206,11 @@
 
   .hero-video .cta-mobile{
     margin-top:18px;
+  }
+}
+
+@media(max-width:390px){
+  .hero h1{
+    font-size:35px;
   }
 }
