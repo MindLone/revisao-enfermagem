@@ -125,8 +125,19 @@
 }
 
 .guarantee-seal{
-  border-color:#1769d2;
+  border:5px solid transparent;
+  background:
+    linear-gradient(#fff,#fff) padding-box,
+    linear-gradient(135deg,#078768 0%,#1769d2 100%) border-box;
   color:#1769d2;
+}
+
+.guarantee-seal strong,
+.guarantee-seal span{
+  color:transparent;
+  background:linear-gradient(135deg,#078768 0%,#1769d2 100%);
+  background-clip:text;
+  -webkit-background-clip:text;
 }
 
 .faq{
@@ -217,6 +228,31 @@
 
   .hero-video .cta-mobile{
     margin-top:18px;
+  }
+
+  .guarantee-card{
+    grid-template-columns:64px 1fr;
+    align-items:center;
+    gap:14px;
+  }
+
+  .guarantee-seal{
+    width:64px;
+    height:64px;
+    border-width:3px;
+  }
+
+  .guarantee-seal strong{
+    font-size:23px;
+  }
+
+  .guarantee-seal span{
+    font-size:8px;
+  }
+
+  .guarantee-card h2{
+    font-size:24px;
+    line-height:1.08;
   }
 }
 
