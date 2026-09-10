@@ -109,11 +109,11 @@
 .preview-shell-solo .phone-demo{
   width:min(330px,86vw);
   margin:0 auto;
-  padding:4px;
+  padding:3px;
   border:1px solid transparent;
   border-radius:11px;
-  background:linear-gradient(#0a1914,#0a1914) padding-box,linear-gradient(135deg,#0a7e62 0%,#24b88e 52%,#147f94 100%) border-box;
-  box-shadow:0 17px 38px rgba(6,64,49,.13);
+  background:linear-gradient(#0a1914,#0a1914) padding-box,linear-gradient(135deg,#2563eb 0%,#168bd8 58%,#18b6a4 100%) border-box;
+  box-shadow:0 17px 38px rgba(21,91,168,.12);
 }
 
 .preview-shell-solo .phone-screen{
@@ -123,11 +123,11 @@
 .preview-shell-solo .text-link{
   display:inline-block;
   margin:0;
-  color:var(--green);
+  color:#1769d2;
   font-size:13px;
   font-weight:900;
   text-decoration:none;
-  border-bottom:1px solid #9cd8c4;
+  border-bottom:1px solid #9ec5f5;
   padding-bottom:4px;
 }
 
@@ -173,7 +173,7 @@
   }
 
   .preview-shell-solo .phone-demo{
-    width:min(310px,86vw);
+    width:min(360px,100%);
   }
 
   .preview-shell-solo .text-link{
