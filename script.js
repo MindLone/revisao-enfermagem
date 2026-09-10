@@ -12,7 +12,7 @@
 
   const promoBar = document.querySelector('.promo-bar');
   if (promoBar) {
-    promoBar.innerHTML = '<span class="promo-dot" aria-hidden="true"></span><p id="promo-date">CONDIÇÃO ESPECIAL DISPONÍVEL HOJE — PAGAMENTO ÚNICO</p>';
+    promoBar.innerHTML = '<p id="promo-date">CONDIÇÃO ESPECIAL DISPONÍVEL HOJE — PAGAMENTO ÚNICO</p>';
   }
 
   function updateDate() {
