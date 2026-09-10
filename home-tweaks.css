@@ -124,6 +124,34 @@
   margin:18px auto 0;
 }
 
+.faq{
+  background:linear-gradient(140deg,#061a33 0%,#073f66 58%,#075d57 100%);
+}
+
+.faq summary span{
+  color:#63d8ff;
+}
+
+.faq details p{
+  color:#bed4e1;
+}
+
+.site-footer{
+  background:linear-gradient(145deg,#04111f 0%,#062b49 60%,#06413d 100%);
+}
+
+.footer-grid p{
+  color:#b8cbd7;
+}
+
+.footer-links a{
+  color:#e4f1f7;
+}
+
+.footer-note{
+  color:#8fa8b7;
+}
+
 @media(min-width:940px){
   .hero .cta-desktop{
     display:inline-flex;
