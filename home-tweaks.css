@@ -66,8 +66,7 @@
   font-size:14px;
   font-weight:900;
   letter-spacing:.01em;
-  transition:opacity .18s ease,filter .18s ease,box-shadow .18s ease;
-  animation:ctaOpacityPulse 2s ease-in-out infinite;
+  transition:transform .18s ease,filter .18s ease,box-shadow .18s ease;
 }
 
 .hero .cta-reference::before{
@@ -75,10 +74,9 @@
 }
 
 .hero .cta-reference:hover{
-  transform:none;
-  opacity:.96;
-  filter:brightness(1.02);
-  box-shadow:0 9px 22px rgba(0,153,102,.19);
+  transform:translateY(-1px) scale(1.015);
+  filter:brightness(1.03);
+  box-shadow:0 10px 24px rgba(0,153,102,.21);
 }
 
 .hero .cta-reference .cta-zap{
@@ -92,11 +90,6 @@
 
 .hero .cta-reference .cta-label{
   display:inline-block;
-}
-
-@keyframes ctaOpacityPulse{
-  0%,100%{opacity:1}
-  50%{opacity:.78}
 }
 
 .preview{
@@ -185,11 +178,5 @@
 
   .preview-shell-solo .text-link{
     font-size:12.5px;
-  }
-}
-
-@media(prefers-reduced-motion:reduce){
-  .hero .cta-reference{
-    animation:none;
   }
 }
