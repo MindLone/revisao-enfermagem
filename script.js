@@ -10,6 +10,25 @@
     else countdown.textContent = 'SES-TO • PROVA EM 01/11/2026';
   }
 
+  const promoBar = document.querySelector('.promo-bar');
+  if (promoBar) {
+    promoBar.innerHTML = '<span class="promo-dot" aria-hidden="true"></span><p id="promo-date">CONDIÇÃO ESPECIAL DISPONÍVEL HOJE — PAGAMENTO ÚNICO</p>';
+  }
+
+  function updateDate() {
+    const target = document.querySelector('#promo-date');
+    if (!target) return;
+    const formatted = new Intl.DateTimeFormat('pt-BR', {
+      timeZone: 'America/Sao_Paulo',
+      weekday: 'long',
+      day: '2-digit',
+      month: 'long'
+    }).format(new Date());
+    target.innerHTML = `🔥 PROMOÇÃO DE <span style="display:inline-block;padding:2px 7px;margin:0 3px;border-radius:4px;background:#e30613;color:#ffe600;font-weight:900;box-shadow:0 0 0 1px rgba(255,230,0,.12) inset;">57% DE DESCONTO</span> SOMENTE HOJE, ${formatted.toUpperCase()}`;
+  }
+
+  updateDate();
+
   const heroCta = document.querySelector('.hero .cta-reference');
   if (heroCta) {
     heroCta.innerHTML = `
