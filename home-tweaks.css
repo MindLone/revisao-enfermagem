@@ -124,6 +124,154 @@
   margin:18px auto 0;
 }
 
+.bonuses{
+  position:relative;
+  overflow:hidden;
+  padding:50px 0 46px;
+  background:
+    radial-gradient(circle at 12% 8%,rgba(16,174,131,.10),transparent 28%),
+    radial-gradient(circle at 90% 88%,rgba(37,99,235,.08),transparent 28%),
+    linear-gradient(180deg,#f7fbf9 0%,#ffffff 100%);
+  border-top:1px solid #e6f0ec;
+}
+
+.bonuses::before{
+  content:"";
+  position:absolute;
+  width:190px;
+  height:190px;
+  right:-115px;
+  top:10px;
+  border:1px solid rgba(21,153,173,.12);
+  border-radius:50%;
+}
+
+.bonus-heading{
+  position:relative;
+  z-index:1;
+  margin:0 auto 18px;
+  text-align:center;
+}
+
+.bonus-heading h2{
+  margin:0;
+  color:var(--navy);
+  font-size:clamp(29px,7vw,42px);
+  line-height:1.06;
+  letter-spacing:-.035em;
+}
+
+.bonus-strip{
+  position:relative;
+  z-index:1;
+  display:flex;
+  gap:13px;
+  width:100%;
+  margin:0;
+  padding:8px 2px 17px;
+  overflow-x:auto;
+  overscroll-behavior-inline:contain;
+  scroll-snap-type:x mandatory;
+  scroll-padding-inline:2px;
+  scrollbar-width:none;
+  -webkit-overflow-scrolling:touch;
+}
+
+.bonus-strip::-webkit-scrollbar{
+  display:none;
+}
+
+.bonus-card{
+  position:relative;
+  flex:0 0 min(78vw,286px);
+  aspect-ratio:1/1;
+  display:grid;
+  grid-template-rows:minmax(0,1fr) auto;
+  scroll-snap-align:start;
+  overflow:hidden;
+  border:1.5px solid transparent;
+  border-radius:22px;
+  background:
+    linear-gradient(#fff,#fff) padding-box,
+    linear-gradient(135deg,#079b72 0%,#20c7c2 48%,#2563eb 100%) border-box;
+  box-shadow:
+    0 16px 38px rgba(7,79,92,.12),
+    0 3px 10px rgba(37,99,235,.06);
+  isolation:isolate;
+}
+
+.bonus-card::before{
+  content:"";
+  position:absolute;
+  inset:-50% -35% auto auto;
+  width:190px;
+  height:190px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(32,199,194,.13),transparent 70%);
+  z-index:-1;
+}
+
+.bonus-visual{
+  position:relative;
+  min-height:0;
+  margin:12px 12px 0;
+  overflow:hidden;
+  border-radius:16px;
+  background:
+    radial-gradient(circle at 28% 30%,rgba(18,184,132,.16),transparent 24%),
+    radial-gradient(circle at 74% 70%,rgba(37,99,235,.14),transparent 29%),
+    linear-gradient(145deg,#f3fbf8 0%,#eef9fb 54%,#f1f5ff 100%);
+}
+
+.bonus-visual::before{
+  content:"";
+  position:absolute;
+  width:58%;
+  height:42%;
+  left:21%;
+  top:27%;
+  border:1px solid rgba(8,135,104,.16);
+  border-radius:14px;
+  background:rgba(255,255,255,.46);
+  box-shadow:0 12px 28px rgba(20,92,111,.08);
+}
+
+.bonus-visual::after{
+  content:"";
+  position:absolute;
+  width:42%;
+  height:8px;
+  left:29%;
+  top:68%;
+  border-radius:999px;
+  background:linear-gradient(90deg,rgba(8,135,104,.22),rgba(21,153,173,.24),rgba(37,99,235,.20));
+  box-shadow:0 12px 26px rgba(37,99,235,.10);
+}
+
+.bonus-copy{
+  padding:14px 16px 17px;
+  text-align:center;
+}
+
+.bonus-copy h3{
+  margin:0;
+  color:var(--navy);
+  font-size:18px;
+  line-height:1.18;
+  letter-spacing:-.018em;
+}
+
+.bonus-copy p{
+  margin:6px 0 0;
+  color:#667680;
+  font-size:13.5px;
+  line-height:1.35;
+}
+
+.price-card .bonus-panel{
+  display:none;
+}
+
 .guarantee-seal{
   border:5px solid transparent;
   background:
@@ -170,6 +318,24 @@
 
 .footer-note{
   color:#7f96a4;
+}
+
+@media(min-width:760px){
+  .bonus-strip{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:18px;
+    max-width:860px;
+    margin-inline:auto;
+    padding:8px 0 12px;
+    overflow:visible;
+  }
+
+  .bonus-card{
+    width:100%;
+    max-width:270px;
+    justify-self:center;
+  }
 }
 
 @media(min-width:940px){
@@ -230,6 +396,40 @@
     margin-top:18px;
   }
 
+  .bonuses{
+    padding:42px 0 38px;
+  }
+
+  .bonus-heading{
+    margin-bottom:14px;
+  }
+
+  .bonus-heading h2{
+    font-size:31px;
+  }
+
+  .bonus-card{
+    flex-basis:min(78vw,274px);
+    border-radius:20px;
+  }
+
+  .bonus-visual{
+    margin:11px 11px 0;
+    border-radius:15px;
+  }
+
+  .bonus-copy{
+    padding:13px 14px 16px;
+  }
+
+  .bonus-copy h3{
+    font-size:17px;
+  }
+
+  .bonus-copy p{
+    font-size:13px;
+  }
+
   .guarantee-card{
     grid-template-columns:64px 1fr;
     align-items:center;
@@ -260,5 +460,9 @@
   .hero h1{
     max-width:330px;
     font-size:39px;
+  }
+
+  .bonus-card{
+    flex-basis:80vw;
   }
 }
