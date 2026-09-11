@@ -37,6 +37,48 @@
       <span class="cta-label">SIM! QUERO VER OS PACOTES</span>`;
   });
 
+  const pricingSection = document.querySelector('#ofertas');
+  if (pricingSection && !document.querySelector('#bonus-exclusivos')) {
+    const bonusSection = document.createElement('section');
+    bonusSection.className = 'section bonuses';
+    bonusSection.id = 'bonus-exclusivos';
+    bonusSection.setAttribute('aria-labelledby', 'bonus-title');
+    bonusSection.innerHTML = `
+      <div class="container">
+        <div class="bonus-heading">
+          <h2 id="bonus-title">Bônus Exclusivos 🎁</h2>
+        </div>
+
+        <div class="bonus-strip" aria-label="Bônus exclusivos do pacote completo">
+          <article class="bonus-card">
+            <div class="bonus-visual" data-bonus-image="cronograma" aria-label="Espaço reservado para a imagem do Cronograma de Estudos"></div>
+            <div class="bonus-copy">
+              <h3>Cronograma de Estudos</h3>
+              <p>Organize estudos até a prova.</p>
+            </div>
+          </article>
+
+          <article class="bonus-card">
+            <div class="bonus-visual" data-bonus-image="mnemonicos" aria-label="Espaço reservado para a imagem do Mural de Mnemônicos"></div>
+            <div class="bonus-copy">
+              <h3>Mural de Mnemônicos</h3>
+              <p>Memorize conteúdos difíceis com atalhos.</p>
+            </div>
+          </article>
+
+          <article class="bonus-card">
+            <div class="bonus-visual" data-bonus-image="caderno-erros" aria-label="Espaço reservado para a imagem do Caderno de Erros"></div>
+            <div class="bonus-copy">
+              <h3>Caderno de Erros</h3>
+              <p>Revise falhas antes de repeti-las.</p>
+            </div>
+          </article>
+        </div>
+      </div>`;
+
+    pricingSection.before(bonusSection);
+  }
+
   const footerLinks = document.querySelector('.footer-links');
   if (footerLinks && !footerLinks.querySelector('a[href="mailto:bibliotecasaudebs@gmail.com"]')) {
     const emailLink = document.createElement('a');
