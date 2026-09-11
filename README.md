@@ -6,17 +6,28 @@ Landing page do **Revisão de Enfermagem — Concursos 2026**, um pack digital d
 
 - **Site em produção (Vercel):** https://revisao-enfermagem-mindlones-projects.vercel.app
 - **Repositório GitHub:** https://github.com/MindLone/revisao-enfermagem
-- **Domínio oficial:** https://revisaoenfermagem.shop
+- **Domínio oficial planejado:** https://revisaoenfermagem.shop
 
 ## Estrutura atual da oferta
 
-- **Pacote Básico — R$ 19,90:** +200 mapas mentais, 11 áreas essenciais, arquivos em PDF, 12 meses de acesso e garantia de 7 dias.
-- **Pacote Completo — R$ 27,00:** tudo do Básico, +500 questões gabaritadas, 50 simulados organizados a partir do mesmo banco de questões, acesso vitalício, atualizações lançadas em 2026 e garantia de 7 dias.
-- **Bônus do Completo:** Cronograma de Aprovação em 60 Dias, Mural de Mnemônicos de Enfermagem, Caderno de Erros Inteligente e Kit Reta Final 7 Dias.
+- 150+ mapas mentais de Enfermagem;
+- 500 questões (200 de Legislação do SUS comentadas + 300 específicas);
+- 300 flashcards;
+- 5 simulados completos;
+- 100 pegadinhas de prova;
+- 100 termos técnicos;
+- SUS Descomplicado;
+- cálculos, diluições e medicamentos;
+- imunização e rede de frio;
+- biossegurança, IRAS e CME;
+- urgência e emergência;
+- cronograma de 30 dias + reta final de 7 dias;
+- caderno de erros;
+- bônus específico por edital.
 
 ## Edição atual
 
-A oferta é evergreen e atende concursos e processos seletivos de Enfermagem em 2026, sem vínculo com uma banca ou um edital específico.
+A campanha-base está preparada para **SES-TO 2026 / FGV**, com prova prevista para **01/11/2026**. O produto principal é evergreen e os blocos de reta final podem ser adaptados para outros editais e estados.
 
 ## Identidade visual
 
@@ -35,8 +46,6 @@ O favicon principal está em `favicon.svg`.
 
 ## Site
 
-A página mantém o foco em tráfego de Meta Ads e apresenta rapidamente os entregáveis, demonstração em vídeo vertical 9:16, bônus, comparação de planos, garantia e FAQ.
-
-A estrutura de avaliações reais está pronta no HTML, mas permanece oculta até existirem relatos verificáveis e autorização de uso.
+A página mantém o foco em tráfego de Meta Ads e apresenta rapidamente os entregáveis, demonstração em vídeo vertical 9:16, materiais, bônus, oferta e FAQ.
 
 O link definitivo do checkout ainda precisa ser configurado quando estiver disponível.
