@@ -56,18 +56,4 @@
     if (url) link.href = url;
     else link.addEventListener('click', (event) => event.preventDefault());
   });
-
-  const deliverables = document.querySelector('[data-deliverables]');
-  if (deliverables) {
-    const cards = [...deliverables.querySelectorAll('.deliverable-card')];
-
-    cards.forEach((card) => {
-      card.addEventListener('toggle', () => {
-        if (!card.open) return;
-        cards.forEach((otherCard) => {
-          if (otherCard !== card) otherCard.open = false;
-        });
-      });
-    });
-  }
 })();
