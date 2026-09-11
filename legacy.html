@@ -1,14 +1,327 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="robots" content="noindex,follow" />
-  <link rel="canonical" href="https://revisaoenfermagem.shop/" />
-  <meta http-equiv="refresh" content="0;url=/" />
-  <title>Revisão de Enfermagem</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#006b58">
+  <meta name="description" content="Enfermagem na Prova — Pack de revisão para concursos de Enfermagem 2026 com mapas mentais, questões, simulados, flashcards e guias rápidos.">
+  <title>Enfermagem na Prova | Pack Concursos 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#062f5c;
+      --navy-2:#0b4f87;
+      --cyan:#10bfd0;
+      --cyan-soft:#e8fbfd;
+      --green:#00725d;
+      --green-dark:#00584b;
+      --green-deep:#064d46;
+      --cta:#11b86d;
+      --cta-dark:#079c5a;
+      --orange:#ff8a1f;
+      --orange-soft:#fff2e6;
+      --red:#e6534b;
+      --ink:#13283a;
+      --muted:#637383;
+      --bg:#f5f8fa;
+      --line:#dfe8ed;
+      --white:#fff;
+      --shadow:0 14px 38px rgba(20,54,70,.10);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Poppins,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased}
+    a{text-decoration:none;color:inherit}
+    button,a{-webkit-tap-highlight-color:transparent}
+    img,svg{max-width:100%}
+    .container{width:min(1040px,calc(100% - 34px));margin:0 auto}
+    .topline{height:8px;background:#071d35}
+    .notice{background:#081f38;color:#fff;text-align:center;padding:8px 14px;font-size:11px;font-weight:700;letter-spacing:.01em}
+    .notice b{color:#7ce5d6}.notice .hot{color:#ffb36b}
+
+    /* logo */
+    .logo{display:flex;justify-content:center;align-items:center;gap:10px;margin:0 auto 18px;width:max-content;max-width:100%}
+    .logo-icon{width:67px;height:58px;flex:0 0 auto}
+    .logo-copy{line-height:.86;text-align:left}
+    .logo-copy strong{display:block;font-size:27px;letter-spacing:-1.5px;font-weight:900;background:linear-gradient(#062f5c,#0b4f87);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .logo-copy span{display:block;margin-top:7px;font-family:"Kaushan Script",cursive;font-size:29px;font-weight:400;background:linear-gradient(#26d7e4,#04aabe);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+    /* shared */
+    section{padding:66px 0}
+    .white{background:#fff}.soft{background:#f5f8fa}.green{background:var(--green);color:#fff}.green-dark{background:var(--green-deep);color:#fff}
+    .kicker{font-size:10px;text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:var(--orange);margin-bottom:8px;text-align:center}
+    .title{max-width:830px;margin:0 auto;text-align:center;font-size:clamp(25px,4vw,42px);line-height:1.08;letter-spacing:-1.7px;font-weight:900;color:#10283c}
+    .green .title,.green-dark .title{color:#fff}
+    .title .green-text{color:var(--green)}.title .cyan{color:var(--cyan)}.title .orange{color:var(--orange)}
+    .desc{max-width:690px;margin:12px auto 0;text-align:center;color:var(--muted);font-size:13px;line-height:1.65}
+    .green .desc,.green-dark .desc{color:#d5ece6}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:49px;padding:13px 22px;border-radius:7px;background:linear-gradient(#15bf73,#08a75f);color:#fff;font-size:12px;font-weight:800;box-shadow:0 8px 20px rgba(7,160,91,.24);transition:.16s ease}
+    .btn:hover{transform:translateY(-1px);filter:brightness(1.02)}
+    .btn-row{text-align:center;margin-top:22px}
+    .micro{text-align:center;margin-top:8px;font-size:9px;color:#82909b;font-weight:600}
+    .green .micro,.green-dark .micro{color:#b9d8d1}
+
+    /* hero */
+    .hero{padding:25px 0 58px;background:#fff;text-align:center}
+    .hero .container{max-width:900px}
+    .hero-badge{display:inline-block;margin-bottom:10px;padding:5px 10px;background:#edf9f6;border:1px solid #cdeae3;border-radius:999px;color:var(--green);font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.09em}
+    .hero h1{margin:0 auto;max-width:790px;font-size:clamp(30px,5.3vw,55px);line-height:1.02;letter-spacing:-2.3px;font-weight:900;color:#13283a}
+    .hero h1 .g{color:var(--green)}.hero h1 .c{color:var(--cyan)}
+    .hero p{max-width:670px;margin:13px auto 0;color:#61717e;font-size:12.5px;line-height:1.65}
+    .hero p b{color:#233e50}
+    .hero-tags{display:flex;justify-content:center;gap:7px;flex-wrap:wrap;margin-top:13px}
+    .hero-tags span{font-size:9px;font-weight:700;color:#366070;background:#f5fafb;border:1px solid #dce9ed;border-radius:5px;padding:6px 8px}
+
+    /* Pinterest-like pack preview */
+    .pack-stage{position:relative;width:min(590px,94vw);height:400px;margin:32px auto 0;display:flex;align-items:center;justify-content:center}
+    .paper{position:relative;width:435px;height:345px;border-radius:12px;background:#f8f5ed;border:8px solid #eef0ec;box-shadow:0 15px 36px rgba(39,71,77,.16);overflow:hidden;transform:rotate(-.6deg)}
+    .paper:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 26px,rgba(92,137,156,.13) 27px 28px);opacity:.72}
+    .paper-title{position:absolute;left:50%;top:18px;transform:translateX(-50%);font-family:"Kaushan Script",cursive;color:#345d66;font-size:27px;white-space:nowrap}
+    .mini-note{position:absolute;width:128px;min-height:91px;padding:10px 9px 7px;background:#fffdf5;border:1px solid #dad8c8;box-shadow:0 4px 12px rgba(65,75,69,.10);font-size:8px;line-height:1.35;color:#52636b;text-align:left}
+    .mini-note b{display:block;margin-bottom:4px;font-family:"Kaushan Script",cursive;font-size:13px;color:#244d58}
+    .mini-note i{font-style:normal;color:#df6f45}.mini-note .under{display:inline;background:linear-gradient(transparent 56%,#bdece7 56%)}
+    .n1{left:20px;top:70px;transform:rotate(-3deg)}.n2{left:153px;top:70px;transform:rotate(2deg)}.n3{right:19px;top:70px;transform:rotate(-1deg)}
+    .n4{left:28px;bottom:32px;transform:rotate(2deg)}.n5{left:157px;bottom:29px;transform:rotate(-2deg)}.n6{right:23px;bottom:31px;transform:rotate(3deg)}
+    .tape{position:absolute;width:44px;height:13px;background:rgba(255,184,82,.58);top:-7px;left:42px;transform:rotate(-2deg)}
+    .pulse-line{position:absolute;left:50%;bottom:6px;transform:translateX(-50%);width:290px;height:26px;opacity:.28}
+    .float-card{position:absolute;padding:8px 10px;border-radius:7px;background:#fff;box-shadow:0 8px 20px rgba(37,69,78,.16);font-size:9px;font-weight:700;color:#49626d}
+    .float-card.left{left:0;top:88px;transform:rotate(-7deg)}.float-card.right{right:0;bottom:73px;transform:rotate(5deg)}
+    .float-card b{color:var(--green)}
+
+    /* video */
+    .inside .container{max-width:840px;text-align:center}
+    .inside-label{display:inline-block;margin-bottom:9px;padding:5px 9px;border-radius:4px;background:rgba(255,255,255,.10);font-size:9px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#d9f6ef}
+    .video-shell{width:min(265px,72vw);aspect-ratio:9/16;margin:26px auto 15px;border-radius:13px;border:6px solid #eef8f5;background:linear-gradient(150deg,#082c53,#08786e);box-shadow:0 18px 35px rgba(0,34,31,.30);position:relative;overflow:hidden}
+    .video-shell:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 15%,rgba(16,191,208,.28),transparent 28%),radial-gradient(circle at 80% 76%,rgba(255,138,31,.18),transparent 30%)}
+    .video-content{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;padding:25px;color:#fff}
+    .play{width:62px;height:62px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 10px 25px rgba(0,0,0,.18);margin-bottom:13px}
+    .play:after{content:"";margin-left:5px;border-top:11px solid transparent;border-bottom:11px solid transparent;border-left:18px solid var(--orange)}
+    .video-content strong{font-size:16px;line-height:1.2}.video-content small{font-size:9px;line-height:1.5;margin-top:7px;color:#cceae4}
+    .thumbs{display:flex;justify-content:center;gap:7px;margin-top:10px}
+    .thumb{width:50px;height:38px;border:2px solid rgba(255,255,255,.5);border-radius:3px;background:#f5f1df;position:relative;overflow:hidden}
+    .thumb:before,.thumb:after{content:"";position:absolute;left:7px;right:7px;height:3px;border-radius:2px;background:#89d8d0}.thumb:before{top:10px}.thumb:after{top:18px;background:#f2a767}
+
+    /* content cards */
+    .materials{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+    .material{background:#fff;border:1px solid #dde7eb;border-radius:9px;overflow:hidden;box-shadow:0 8px 24px rgba(28,64,77,.07);text-align:left}
+    .mock{height:150px;background:#f4f7f8;padding:14px;position:relative;overflow:hidden}
+    .mock:after{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--cyan)}
+    .material:nth-child(2) .mock:after,.material:nth-child(5) .mock:after{background:var(--orange)}
+    .material:nth-child(3) .mock:after,.material:nth-child(6) .mock:after{background:var(--cta)}
+    .sheet{height:100%;background:#fff;border-radius:5px;border:1px solid #e1e8eb;padding:10px;box-shadow:0 4px 10px rgba(30,61,70,.06)}
+    .sheet .h{height:8px;width:65%;border-radius:4px;background:#24465b;margin-bottom:9px}.sheet .hl{display:inline-block;font-family:"Kaushan Script";font-size:14px;color:#267879;margin-bottom:5px}
+    .sheet .line{height:4px;border-radius:3px;background:#d4e0e5;margin:6px 0}.sheet .line.teal{background:#97dfda;width:74%}.sheet .line.orange{background:#ffc48c;width:58%}
+    .material-body{padding:14px 15px 16px}.material-body h3{margin:0;font-size:13px;line-height:1.25;color:#173348}.material-body p{margin:6px 0 0;font-size:9.5px;line-height:1.55;color:#71808c}.material-body .tag{display:inline-block;margin-top:10px;padding:4px 7px;border-radius:4px;background:#e9f8f4;color:#078260;font-size:8px;font-weight:800}
+
+    .guide-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px}
+    .guide{padding:13px 10px;border-radius:7px;background:#eef8f6;border:1px solid #d4ebe6;text-align:center;font-size:9px;font-weight:700;color:#35645c}.guide b{display:block;font-size:11px;color:#086b59;margin-bottom:4px}
+
+    /* pain */
+    .painbox{max-width:790px;margin:0 auto;text-align:center}.painbox .quote{max-width:690px;margin:22px auto 0;padding:14px 19px;background:rgba(3,51,46,.48);border-radius:8px;color:#e8f7f3;font-size:10.5px;line-height:1.65;border:1px solid rgba(255,255,255,.08)}
+
+    /* bonus grid */
+    .bonus-area{display:grid;grid-template-columns:250px 1fr;gap:26px;align-items:center;margin-top:35px}
+    .bonus-copy h3{margin:0;font-size:28px;line-height:1.08;letter-spacing:-1px}.bonus-copy h3 span{color:var(--green)}.bonus-copy p{font-size:10.5px;line-height:1.65;color:#667985}.bonus-boxes{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+    .bonus{position:relative;background:#fff;border:1px solid #dfe7ea;border-radius:8px;padding:13px 13px 14px;min-height:150px;box-shadow:0 7px 22px rgba(25,61,73,.06)}
+    .bonus .ribbon{position:absolute;right:8px;top:-8px;background:var(--orange);color:#fff;font-size:7px;font-weight:800;padding:4px 6px;border-radius:3px;text-transform:uppercase}.bonus-icon{height:62px;border-radius:5px;background:#f4f8f9;border:1px solid #e1e9ec;display:flex;align-items:center;justify-content:center;color:var(--green);font-size:27px}.bonus h4{font-size:11px;margin:10px 0 0}.bonus p{font-size:8.5px;line-height:1.45;color:#75818b;margin:5px 0 0}
+
+    /* offer */
+    .offer-wrap{max-width:560px;margin:0 auto;text-align:center}.offer-card{background:#fff;color:var(--ink);border-radius:10px;padding:22px 24px 24px;box-shadow:0 18px 42px rgba(0,31,29,.25);text-align:left}.offer-head{text-align:center}.offer-head .small{font-size:9px;font-weight:800;color:var(--orange);text-transform:uppercase;letter-spacing:.09em}.offer-head h2{margin:6px 0 0;font-size:27px;letter-spacing:-1px;color:#153248}.offer-list{padding:0;margin:20px 0 18px;list-style:none;display:grid;gap:8px}.offer-list li{position:relative;padding-left:23px;font-size:10px;line-height:1.45;color:#4e626f;font-weight:600}.offer-list li:before{content:"✓";position:absolute;left:0;top:-1px;width:16px;height:16px;border-radius:50%;background:#e2f6ec;color:#0a9e5f;display:grid;place-items:center;font-size:9px;font-weight:900}.price-block{text-align:center;border-top:1px solid #e4eaed;padding-top:17px}.old{font-size:10px;color:#87939c}.old s{color:#a0a8ad}.price{margin-top:2px;color:#132e42;font-weight:900;line-height:1}.price .currency{font-size:17px}.price .big{font-size:50px;letter-spacing:-3px}.price .cents{font-size:22px}.pay{font-size:8.5px;color:#7f8b94;margin-top:4px}.offer-card .btn{display:flex;width:100%;margin-top:15px}.secure{display:flex;justify-content:center;gap:13px;flex-wrap:wrap;margin-top:10px;font-size:8px;color:#78868e;font-weight:600}
+
+    /* guarantee + faq */
+    .guarantee{max-width:820px;margin:0 auto;padding:26px;border:1px solid #dfe9ec;border-radius:10px;background:#fff;box-shadow:0 7px 25px rgba(31,64,75,.05);text-align:center}.seal{width:62px;height:62px;margin:0 auto 12px;border-radius:50%;background:var(--orange-soft);border:2px solid #ffb975;display:grid;place-items:center;color:#d96a0a;font-size:27px}.guarantee h3{margin:0;font-size:19px}.guarantee p{max-width:650px;margin:8px auto 0;color:#6d7b84;font-size:10px;line-height:1.6}
+    .faq{max-width:800px;margin:28px auto 0}.faq details{background:#fff;border:1px solid #dfe8ec;border-radius:7px;margin:8px 0;overflow:hidden}.faq summary{cursor:pointer;list-style:none;padding:13px 38px 13px 15px;font-size:10px;font-weight:700;color:#2b4353;position:relative}.faq summary::-webkit-details-marker{display:none}.faq summary:after{content:"+";position:absolute;right:14px;top:8px;font-size:20px;color:var(--green)}.faq details[open] summary:after{content:"−"}.faq details p{margin:0;padding:0 15px 14px;color:#6f7f89;font-size:9.5px;line-height:1.6}
+
+    footer{background:#071d35;color:#9fb3c1;padding:28px 0;text-align:center;font-size:8.5px;line-height:1.7}footer .footer-logo{font-size:12px;font-weight:800;color:#fff;margin-bottom:6px}footer a{color:#c0d1dc;text-decoration:underline;margin:0 5px}
+
+    @media(max-width:850px){
+      section{padding:52px 0}.materials{grid-template-columns:repeat(2,1fr)}.guide-strip{grid-template-columns:repeat(2,1fr)}.bonus-area{grid-template-columns:1fr}.bonus-copy{text-align:center;max-width:600px;margin:0 auto}.bonus-copy p{max-width:540px;margin:9px auto 0}
+    }
+    @media(max-width:560px){
+      .container{width:min(100% - 28px,1040px)}.notice{font-size:9px}.logo{transform:scale(.88);margin-bottom:12px}.hero{padding-top:18px}.hero h1{font-size:33px;letter-spacing:-1.45px}.hero p{font-size:10.5px}.pack-stage{height:330px;margin-top:22px}.paper{width:332px;height:270px;border-width:6px}.paper-title{font-size:21px;top:13px}.mini-note{width:98px;min-height:74px;padding:7px;font-size:6.2px}.mini-note b{font-size:10px}.n1{left:13px;top:53px}.n2{left:116px;top:54px}.n3{right:12px;top:53px}.n4{left:17px;bottom:26px}.n5{left:117px;bottom:24px}.n6{right:14px;bottom:25px}.tape{width:34px;height:9px;top:-5px;left:32px}.float-card{display:none}.pulse-line{width:215px}.title{font-size:27px;letter-spacing:-1.1px}.desc{font-size:10.5px}.materials{grid-template-columns:1fr;gap:13px}.mock{height:175px}.guide-strip{grid-template-columns:1fr 1fr}.bonus-boxes{grid-template-columns:1fr}.bonus{min-height:auto}.offer-card{padding:20px 17px}.green,.green-dark{background-position:center}.video-shell{width:235px}
+    }
+  </style>
 </head>
 <body>
-  <p>Esta versão foi atualizada. <a href="/">Acesse a página atual</a>.</p>
+  <div class="topline"></div>
+  <div class="notice">PACK ENFERMAGEM PARA CONCURSOS 2026 • <b>EDIÇÃO ATUALIZADA</b> • <span class="hot" id="deadline">RETA FINAL SES-TO</span></div>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="container">
+        <div class="logo" aria-label="Enfermagem na Prova">
+          <svg class="logo-icon" viewBox="0 0 100 86" aria-hidden="true">
+            <defs>
+              <linearGradient id="lg1" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#073d76"/><stop offset="1" stop-color="#052a54"/></linearGradient>
+              <linearGradient id="lg2" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#25d5e2"/><stop offset="1" stop-color="#04aabe"/></linearGradient>
+            </defs>
+            <path d="M21 14 68 20c6 .7 9 4 9 10v38c0 5-4 8-9 7l-47-6c-6-.8-9-4-9-10V22c0-6 4-9 9-8Z" fill="url(#lg1)"/>
+            <path d="M6 27v35c0 7 5 12 12 13l45 5" fill="none" stroke="url(#lg2)" stroke-width="7" stroke-linecap="round"/>
+            <path d="M27 34h29M27 44h22M27 54h14" stroke="#14c7d6" stroke-width="5" stroke-linecap="round"/>
+            <path d="m47 59 8 8 17-22" fill="none" stroke="#ff8a1f" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M7 70h17l7-10 8 21 7-14 5 5h39" fill="none" stroke="url(#lg2)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="logo-copy"><strong>Enfermagem</strong><span>na Prova</span></div>
+        </div>
+
+        <div class="hero-badge">Revisão prática para concursos</div>
+        <h1>O Pack que faltava para você <span class="g">revisar Enfermagem</span> e chegar mais preparado <span class="c">na prova.</span></h1>
+        <p>Resumos visuais, questões, simulados e materiais de revisão reunidos em um único lugar. Conteúdo pensado para <b>concursos e processos seletivos de Enfermagem em 2026</b>.</p>
+        <div class="hero-tags"><span>150+ Mapas Mentais</span><span>500 Questões</span><span>300 Flashcards</span><span>5 Simulados</span></div>
+
+        <div class="pack-stage" aria-label="Prévia ilustrativa do material">
+          <div class="float-card left"><b>SUS</b><br>Leis 8.080 e 8.142</div>
+          <div class="paper">
+            <div class="paper-title">Meu resumão de Enfermagem</div>
+            <div class="mini-note n1"><span class="tape"></span><b>SUS</b><span class="under">Princípios e diretrizes</span><br>Universalidade • Integralidade • Equidade</div>
+            <div class="mini-note n2"><span class="tape"></span><b>Imunização</b>Rede de frio<br><i>Conservação</i><br>PNI e pontos de prova</div>
+            <div class="mini-note n3"><span class="tape"></span><b>Urgência</b>PCR • choque<br>avaliação inicial<br><span class="under">prioridades</span></div>
+            <div class="mini-note n4"><span class="tape"></span><b>Medicamentos</b>Cálculos<br>diluições<br>vias de administração</div>
+            <div class="mini-note n5"><span class="tape"></span><b>Biossegurança</b>Precauções<br>IRAS • CME<br><i>esterilização</i></div>
+            <div class="mini-note n6"><span class="tape"></span><b>Ética</b>Sigilo<br>responsabilidades<br>legislação profissional</div>
+            <svg class="pulse-line" viewBox="0 0 300 30"><path d="M2 17h68l9-10 12 20 13-26 12 16h28l9-8 12 16 8-8h125" fill="none" stroke="#059e9e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="float-card right"><b>+500</b><br>questões para praticar</div>
+        </div>
+
+        <div class="btn-row"><a class="btn" href="#oferta">QUERO CONHECER O PACK COMPLETO ↓</a></div>
+        <div class="micro">Material digital • acesso após a confirmação do pagamento</div>
+      </div>
+    </section>
+
+    <section class="green inside">
+      <div class="container">
+        <span class="inside-label">Veja por dentro</span>
+        <h2 class="title">Antes de comprar, veja exatamente como o <span class="orange">Pack funciona.</span></h2>
+        <p class="desc">Este espaço está reservado para o seu vídeo vertical 9:16 apresentando o material, a proposta da revisão e tudo o que será entregue.</p>
+        <div class="video-shell">
+          <div class="video-content"><div class="play"></div><strong>VÍDEO DO PACK<br>9:16</strong><small>Aqui entra sua VSL / demonstração do material.</small></div>
+        </div>
+        <div class="thumbs"><span class="thumb"></span><span class="thumb"></span><span class="thumb"></span><span class="thumb"></span><span class="thumb"></span></div>
+        <div class="btn-row"><a class="btn" href="#oferta">SIM, QUERO REVISAR COM MAIS ORGANIZAÇÃO</a></div>
+      </div>
+    </section>
+
+    <section class="soft">
+      <div class="container">
+        <div class="kicker">Tudo dentro de um único pack</div>
+        <h2 class="title">Veja exatamente o que você vai receber no <span class="green-text">Enfermagem na Prova.</span></h2>
+        <p class="desc">Sem biblioteca bagunçada. Cada material tem uma função clara: revisar, praticar, testar e corrigir seus pontos fracos.</p>
+
+        <div class="materials">
+          <article class="material"><div class="mock"><div class="sheet"><div class="h"></div><span class="hl">Mapas Mentais</span><div class="line teal"></div><div class="line"></div><div class="line orange"></div><div class="line"></div><div class="line teal"></div></div></div><div class="material-body"><h3>150+ Mapas Mentais de Enfermagem</h3><p>SUS, fundamentos, ética, biossegurança, imunização, urgência, medicamentos e outros temas recorrentes.</p><span class="tag">REVISÃO VISUAL</span></div></article>
+          <article class="material"><div class="mock"><div class="sheet"><div class="h"></div><span class="hl">Questões</span><div class="line orange"></div><div class="line"></div><div class="line teal"></div><div class="line"></div><div class="line"></div></div></div><div class="material-body"><h3>500 Questões para Treinamento</h3><p>200 questões de Legislação do SUS comentadas + 300 questões de conhecimentos específicos com gabarito.</p><span class="tag">PRÁTICA DIRECIONADA</span></div></article>
+          <article class="material"><div class="mock"><div class="sheet"><div class="h"></div><span class="hl">Flashcards</span><div class="line teal"></div><div class="line teal"></div><div class="line"></div><div class="line orange"></div><div class="line"></div></div></div><div class="material-body"><h3>300 Flashcards de Revisão</h3><p>Cards curtos para revisar conceitos, fórmulas, definições e pontos importantes mesmo com poucos minutos disponíveis.</p><span class="tag">REVISÃO RÁPIDA</span></div></article>
+          <article class="material"><div class="mock"><div class="sheet"><div class="h"></div><span class="hl">Simulados</span><div class="line"></div><div class="line teal"></div><div class="line"></div><div class="line orange"></div><div class="line"></div></div></div><div class="material-body"><h3>5 Simulados Completos</h3><p>Treine ritmo de prova, confira o gabarito e identifique os assuntos que ainda precisam de reforço.</p><span class="tag">TESTE SEU NÍVEL</span></div></article>
+          <article class="material"><div class="mock"><div class="sheet"><div class="h"></div><span class="hl">Pegadinhas</span><div class="line orange"></div><div class="line"></div><div class="line orange"></div><div class="line teal"></div><div class="line"></div></div></div><div class="material-body"><h3>100 Pegadinhas de Prova</h3><p>Confusões e erros frequentes em questões de Enfermagem, organizados para uma revisão objetiva antes da prova.</p><span class="tag">EVITE ERROS BOBOS</span></div></article>
+          <article class="material"><div class="mock"><div class="sheet"><div class="h"></div><span class="hl">Cronograma</span><div class="line teal"></div><div class="line"></div><div class="line"></div><div class="line orange"></div><div class="line teal"></div></div></div><div class="material-body"><h3>Cronograma + Caderno de Erros</h3><p>Plano de revisão de 30 dias, reta final de 7 dias e espaço para registrar questões erradas e revisar novamente.</p><span class="tag">ORGANIZAÇÃO</span></div></article>
+        </div>
+
+        <div class="guide-strip">
+          <div class="guide"><b>SUS Descomplicado</b>Leis, princípios e diretrizes</div>
+          <div class="guide"><b>Cálculos sem Erro</b>Diluições e medicamentos</div>
+          <div class="guide"><b>Imunização</b>PNI e Rede de Frio</div>
+          <div class="guide"><b>Urgência</b>Revisão para provas</div>
+        </div>
+        <div class="btn-row"><a class="btn" href="#oferta">QUERO TER ACESSO A TODO O MATERIAL</a></div>
+      </div>
+    </section>
+
+    <section class="green">
+      <div class="container painbox">
+        <div class="kicker" style="color:#8be7d7">Revisão feita para caber na rotina</div>
+        <h2 class="title">A rotina de Enfermagem já é pesada. <br>Estudar não precisa virar mais um peso.</h2>
+        <p class="desc">Em vez de abrir dezenas de apostilas e tentar descobrir o que revisar, use materiais curtos para recuperar o conteúdo e parta para as questões.</p>
+        <div class="quote"><b>REVISE → RESOLVA → IDENTIFIQUE O ERRO → REVISE NOVAMENTE.</b><br>É essa lógica simples que organiza o Pack Enfermagem na Prova.</div>
+      </div>
+    </section>
+
+    <section class="white">
+      <div class="container">
+        <div class="kicker">Materiais extras</div>
+        <h2 class="title">Além do conteúdo principal, você ainda leva <span class="green-text">estes complementos.</span></h2>
+        <div class="bonus-area">
+          <div class="bonus-copy"><h3>Fechando seu Pack, <span>você recebe mais.</span></h3><p>Os extras foram pensados para pontos que costumam gerar dúvida e para deixar a revisão final mais organizada.</p></div>
+          <div class="bonus-boxes">
+            <article class="bonus"><span class="ribbon">Incluído</span><div class="bonus-icon">💊</div><h4>Guia de Cálculos e Medicamentos</h4><p>Regra de três, diluições, gotejamento, conversões e pontos essenciais para questões.</p></article>
+            <article class="bonus"><span class="ribbon">Incluído</span><div class="bonus-icon">🦠</div><h4>Biossegurança, IRAS e CME</h4><p>Precauções, limpeza, desinfecção, esterilização e controle de infecções.</p></article>
+            <article class="bonus"><span class="ribbon">Incluído</span><div class="bonus-icon">🩺</div><h4>100 Termos Técnicos</h4><p>Cards de consulta rápida com termos frequentes na prática e em questões.</p></article>
+            <article class="bonus"><span class="ribbon">Edição atual</span><div class="bonus-icon">🎯</div><h4>Reta Final SES-TO 2026 — FGV</h4><p>Checklist e direcionamento específico para a preparação da prova prevista para 01/11/2026.</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="green-dark" id="oferta">
+      <div class="container offer-wrap">
+        <div class="kicker" style="color:#8ee7d9">Acesso ao pack completo</div>
+        <h2 class="title">Comece sua revisão com tudo organizado em um único lugar.</h2>
+        <p class="desc">Pagamento único. Material digital. Acesso após a confirmação da compra.</p>
+        <div class="offer-card" style="margin-top:26px">
+          <div class="offer-head"><span class="small">Pack completo 2026</span><h2>Enfermagem na Prova</h2></div>
+          <ul class="offer-list">
+            <li>150+ Mapas Mentais de Enfermagem</li>
+            <li>500 questões, incluindo 200 de SUS comentadas</li>
+            <li>300 Flashcards de revisão rápida</li>
+            <li>5 Simulados completos + caderno de erros</li>
+            <li>100 Pegadinhas + 100 Termos Técnicos</li>
+            <li>Guias de SUS, medicamentos, imunização, biossegurança e urgência</li>
+            <li>Cronograma 30 dias + Reta Final de 7 dias</li>
+            <li>Bônus atual SES-TO 2026 — FGV</li>
+          </ul>
+          <div class="price-block">
+            <div class="old">Acesso completo por apenas</div>
+            <div class="price"><span class="currency">R$</span><span class="big">19</span><span class="cents">,90</span></div>
+            <div class="pay">Pagamento único • sem mensalidade</div>
+            <a class="btn buy-btn" href="#">QUERO ACESSAR O PACK AGORA</a>
+            <div class="secure"><span>🔒 Compra segura</span><span>⚡ Acesso digital</span><span>📱 Estude onde quiser</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft">
+      <div class="container">
+        <div class="guarantee"><div class="seal">✓</div><h3>Material digital organizado para revisão</h3><p>O Pack foi estruturado para concursos e processos seletivos de Enfermagem. Ele é um material independente e não possui vínculo oficial com bancas, órgãos públicos ou concursos citados.</p></div>
+
+        <div class="kicker" style="margin-top:42px">Dúvidas frequentes</div>
+        <h2 class="title" style="font-size:28px">Ainda ficou alguma dúvida?</h2>
+        <div class="faq">
+          <details><summary>O Pack serve somente para o SES-TO?</summary><p>Não. O conteúdo principal reúne temas recorrentes em concursos e processos seletivos de Enfermagem. A edição atual inclui um complemento específico de reta final para o SES-TO 2026.</p></details>
+          <details><summary>O material é para Enfermeiro ou Técnico em Enfermagem?</summary><p>O Pack reúne revisão de assuntos presentes em provas de Enfermagem. Como cada cargo e edital possuem conteúdos próprios, o candidato deve sempre comparar o material com o seu edital específico.</p></details>
+          <details><summary>Vou receber curso em vídeo?</summary><p>A proposta principal não é um curso longo. O produto é um Pack de revisão com mapas mentais, questões, simulados, flashcards, guias e materiais de apoio.</p></details>
+          <details><summary>As questões têm gabarito?</summary><p>Sim. O planejamento atual inclui 500 questões com gabarito, sendo um bloco de 200 questões de Legislação do SUS comentadas.</p></details>
+          <details><summary>Consigo estudar pelo celular?</summary><p>Sim. Os materiais digitais podem ser acessados pelo celular, além de computador ou tablet conforme o formato de cada arquivo.</p></details>
+          <details><summary>O Pack garante aprovação?</summary><p>Não. Nenhum material sério pode garantir aprovação em concurso. O objetivo é facilitar a revisão, o treino com questões e a organização do estudo.</p></details>
+          <details><summary>Quando recebo o acesso?</summary><p>O acesso é liberado após a confirmação do pagamento pela plataforma de checkout utilizada.</p></details>
+        </div>
+        <div class="btn-row"><a class="btn" href="#oferta">QUERO O PACK ENFERMAGEM NA PROVA</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container"><div class="footer-logo">Enfermagem na Prova</div><div>Material independente de preparação e revisão para concursos de Enfermagem.</div><div><a href="privacidade.html">Política de Privacidade</a> · <a href="termos.html">Termos de Uso</a></div></div></footer>
+
+  <script>
+    const CHECKOUT_URL = "";
+    const prova = new Date("2026-11-01T00:00:00-03:00");
+    const deadline = document.getElementById("deadline");
+    const hoje = new Date();
+    const dias = Math.ceil((prova-hoje)/86400000);
+    if(deadline){
+      if(dias>1) deadline.textContent = `SES-TO: FALTAM ${dias} DIAS PARA A PROVA`;
+      else if(dias===1) deadline.textContent = "SES-TO: A PROVA É AMANHÃ";
+      else if(dias===0) deadline.textContent = "SES-TO: DIA DA PROVA";
+      else deadline.textContent = "PACK ATUALIZADO 2026";
+    }
+    document.querySelectorAll('.buy-btn').forEach(btn=>{
+      btn.addEventListener('click',e=>{
+        if(!CHECKOUT_URL){e.preventDefault();return;}
+        btn.href=CHECKOUT_URL;
+      });
+    });
+  </script>
 </body>
 </html>
