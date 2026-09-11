@@ -79,6 +79,94 @@
     pricingSection.before(bonusSection);
   }
 
+  if (pricingSection && !document.querySelector('#avaliacoes')) {
+    const reviewsSection = document.createElement('section');
+    reviewsSection.className = 'section reviews-band';
+    reviewsSection.id = 'avaliacoes';
+    reviewsSection.setAttribute('aria-labelledby', 'reviews-title');
+    reviewsSection.innerHTML = `
+      <div class="container reviews-container">
+        <div class="reviews-heading">
+          <p>AVALIAÇÕES DOS CLIENTES</p>
+          <h2 id="reviews-title">Veja avaliações de alguns dos nossos clientes:</h2>
+        </div>
+
+        <div class="reviews-shell" data-reviews-carousel role="region" aria-roledescription="carrossel" aria-label="Avaliações dos clientes">
+          <button class="reviews-arrow reviews-arrow--prev" type="button" aria-label="Ver avaliações anteriores" data-reviews-prev>‹</button>
+
+          <div class="reviews-viewport" data-reviews-viewport tabindex="0" aria-label="Arraste para os lados para ver mais avaliações">
+            <div class="reviews-track">
+              ${Array.from({ length: 6 }, (_, index) => `
+                <article class="review-shot" data-review-image="${index + 1}" aria-label="Espaço reservado para a avaliação ${index + 1}">
+                  <div class="review-placeholder" aria-hidden="true">
+                    <span>AVALIAÇÃO ${String(index + 1).padStart(2, '0')}</span>
+                    <strong>Imagem da avaliação</strong>
+                  </div>
+                </article>`).join('')}
+            </div>
+          </div>
+
+          <button class="reviews-arrow reviews-arrow--next" type="button" aria-label="Ver próximas avaliações" data-reviews-next>›</button>
+        </div>
+
+        <p class="reviews-swipe-hint">← Arraste para ver mais →</p>
+      </div>`;
+
+    pricingSection.before(reviewsSection);
+
+    const viewport = reviewsSection.querySelector('[data-reviews-viewport]');
+    const prevButton = reviewsSection.querySelector('[data-reviews-prev]');
+    const nextButton = reviewsSection.querySelector('[data-reviews-next]');
+    const firstCard = reviewsSection.querySelector('.review-shot');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let autoTimer = null;
+
+    const stepSize = () => {
+      if (!firstCard) return Math.max(260, viewport.clientWidth * 0.8);
+      const styles = getComputedStyle(reviewsSection.querySelector('.reviews-track'));
+      const gap = parseFloat(styles.columnGap || styles.gap || '14') || 14;
+      return firstCard.getBoundingClientRect().width + gap;
+    };
+
+    const scrollReviews = (direction) => {
+      const nearEnd = viewport.scrollLeft + viewport.clientWidth >= viewport.scrollWidth - 8;
+      const nearStart = viewport.scrollLeft <= 8;
+
+      if (direction > 0 && nearEnd) {
+        viewport.scrollTo({ left: 0, behavior: reducedMotion ? 'auto' : 'smooth' });
+        return;
+      }
+
+      if (direction < 0 && nearStart) {
+        viewport.scrollTo({ left: viewport.scrollWidth, behavior: reducedMotion ? 'auto' : 'smooth' });
+        return;
+      }
+
+      viewport.scrollBy({ left: stepSize() * direction, behavior: reducedMotion ? 'auto' : 'smooth' });
+    };
+
+    prevButton.addEventListener('click', () => scrollReviews(-1));
+    nextButton.addEventListener('click', () => scrollReviews(1));
+
+    const stopAuto = () => {
+      if (autoTimer) window.clearInterval(autoTimer);
+      autoTimer = null;
+    };
+
+    const startAuto = () => {
+      if (reducedMotion || autoTimer) return;
+      autoTimer = window.setInterval(() => scrollReviews(1), 5000);
+    };
+
+    ['pointerdown', 'touchstart', 'focusin', 'mouseenter'].forEach((eventName) => {
+      reviewsSection.addEventListener(eventName, stopAuto, { passive: true });
+    });
+    reviewsSection.addEventListener('mouseleave', startAuto);
+    reviewsSection.addEventListener('focusout', startAuto);
+
+    startAuto();
+  }
+
   const footerLinks = document.querySelector('.footer-links');
   if (footerLinks && !footerLinks.querySelector('a[href="mailto:bibliotecasaudebs@gmail.com"]')) {
     const emailLink = document.createElement('a');
