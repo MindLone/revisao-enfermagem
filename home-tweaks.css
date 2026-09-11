@@ -28,23 +28,7 @@
 }
 
 .hero-countdown{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  width:auto;
-  margin:0 0 14px;
-  padding:7px 13px;
-  border:1px solid rgba(224,122,25,.20);
-  border-radius:999px;
-  color:#d86f0c;
-  background:linear-gradient(90deg,rgba(255,133,27,.15) 0%,rgba(255,255,255,.98) 24%,#fff 50%,rgba(255,255,255,.98) 76%,rgba(231,76,60,.12) 100%);
-  box-shadow:0 3px 10px rgba(181,96,15,.06);
-  font-size:11.5px;
-  line-height:1.25;
-  font-weight:900;
-  letter-spacing:.065em;
-  text-transform:uppercase;
-  text-shadow:none;
+  display:none!important;
 }
 
 .hero .cta-reference{
@@ -325,6 +309,14 @@
   letter-spacing:-.035em;
 }
 
+.reviews-count-highlight{
+  color:transparent;
+  background:linear-gradient(115deg,#46e6a6 0%,#29d3d8 48%,#58a7ff 100%);
+  background-clip:text;
+  -webkit-background-clip:text;
+  filter:drop-shadow(0 0 9px rgba(41,211,216,.34));
+}
+
 .reviews-shell{
   position:relative;
   max-width:1040px;
@@ -370,7 +362,8 @@
 }
 
 .reviews-viewport:focus-visible{
-  box-shadow:0 0 0 3px rgba(95,220,231,.28);
+  outline:2px solid rgba(95,220,231,.38);
+  outline-offset:2px;
   border-radius:18px;
 }
 
@@ -389,9 +382,7 @@
   border:1.5px solid rgba(91,214,220,.55);
   border-radius:17px;
   background:#f7fbff;
-  box-shadow:
-    0 18px 44px rgba(0,0,0,.22),
-    0 0 0 1px rgba(37,99,235,.12) inset;
+  box-shadow:none;
 }
 
 .review-shot img{
@@ -442,7 +433,7 @@
   border-radius:50%;
   color:#fff;
   background:rgba(6,24,41,.88);
-  box-shadow:0 12px 30px rgba(0,0,0,.30),0 0 0 1px rgba(255,255,255,.035) inset;
+  box-shadow:none;
   backdrop-filter:blur(10px);
   font-size:35px;
   line-height:1;
@@ -585,13 +576,17 @@
   }
 }
 
-@media(max-width:560px){
-  .hero-countdown{
-    margin-bottom:11px;
-    padding:7px 11px;
-    font-size:10.5px;
+@media(max-width:719px){
+  .price-card.complete{
+    order:-1;
   }
 
+  .reviews-swipe-hint{
+    font-size:14px;
+  }
+}
+
+@media(max-width:560px){
   .hero h1{
     max-width:340px;
     margin-inline:auto;
@@ -699,7 +694,7 @@
 
   .reviews-swipe-hint{
     margin-top:10px;
-    font-size:12px;
+    font-size:14px;
   }
 
   .guarantee-card{
