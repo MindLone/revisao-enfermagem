@@ -1,33 +1,8 @@
 (() => {
-  const examDate = new Date('2026-11-01T00:00:00-03:00');
-  const now = new Date();
-  const days = Math.max(0, Math.ceil((examDate - now) / 86400000));
-  const countdown = document.querySelector('[data-exam-countdown]');
-
-  if (countdown) {
-    if (days > 1) countdown.textContent = `SES-TO • FALTAM ${days} DIAS PARA A PROVA`;
-    else if (days === 1) countdown.textContent = 'SES-TO • A PROVA É AMANHÃ';
-    else countdown.textContent = 'SES-TO • PROVA EM 01/11/2026';
-  }
-
   const promoBar = document.querySelector('.promo-bar');
   if (promoBar) {
-    promoBar.innerHTML = '<p id="promo-date">CONDIÇÃO ESPECIAL DISPONÍVEL HOJE — PAGAMENTO ÚNICO</p>';
+    promoBar.innerHTML = '<span class="promo-dot" aria-hidden="true"></span><p>PAGAMENTO ÚNICO <span aria-hidden="true">•</span> SEM MENSALIDADE <span aria-hidden="true">•</span> GARANTIA DE 7 DIAS</p>';
   }
-
-  function updateDate() {
-    const target = document.querySelector('#promo-date');
-    if (!target) return;
-    const formatted = new Intl.DateTimeFormat('pt-BR', {
-      timeZone: 'America/Sao_Paulo',
-      weekday: 'long',
-      day: '2-digit',
-      month: 'long'
-    }).format(new Date());
-    target.innerHTML = `🔥 PROMOÇÃO DE <span style="display:inline-block;padding:2px 7px;margin:0 3px;border-radius:4px;background:#e30613;color:#ffe600;font-weight:900;box-shadow:0 0 0 1px rgba(255,230,0,.12) inset;">57% DE DESCONTO</span> SOMENTE HOJE, ${formatted.toUpperCase()}`;
-  }
-
-  updateDate();
 
   document.querySelectorAll('.hero .cta-reference').forEach((heroCta) => {
     heroCta.innerHTML = `
@@ -69,5 +44,18 @@
         });
       });
     });
+  }
+
+  const bonusCards = document.querySelectorAll('.bonus-card');
+  if (bonusCards.length && 'IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    bonusCards.forEach((card) => card.classList.add('bonus-card--reveal'));
+    const revealBonus = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.18 });
+    bonusCards.forEach((card) => revealBonus.observe(card));
   }
 })();
