@@ -165,53 +165,63 @@
   }
 
   if (pricingSection) {
+    const checkIcon = `
+      <svg class="feature-check" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <circle cx="12" cy="12" r="9"></circle>
+        <path d="m8.2 12.2 2.45 2.45 5.35-5.35"></path>
+      </svg>`;
+
     pricingSection.innerHTML = `
       <div class="container">
         <div class="section-heading center pricing-heading-simple">
-          <h2 id="pricing-title">Escolha o pacote ideal para sua preparação.</h2>
+          <h2 id="pricing-title">Tenha acesso a <span class="pricing-title-gradient">Tudo</span></h2>
+          <p>Garanta todo o material por apenas <strong>R$ 7,10 a mais!</strong></p>
         </div>
 
         <div class="price-grid">
           <article class="price-card basic">
             <div class="plan-head">
               <p class="plan-kicker">OPÇÃO BÁSICA</p>
-              <h3>Pacote Básico</h3>
+              <h3>PACOTE BÁSICO</h3>
               <p>Para quem quer começar com o essencial.</p>
             </div>
 
             <ul class="feature-list pricing-feature-list">
-              <li><span class="feature-check">✅</span><span class="feature-text"><strong>100 Mapas Mentais</strong></span></li>
-              <li><span class="feature-check">✅</span><span class="feature-text"><strong>250 Questões Gabaritadas</strong></span></li>
-              <li><span class="feature-check">✅</span><span class="feature-text"><strong>25 Simulados</strong></span></li>
-              <li><span class="feature-check">✅</span><span class="feature-text">Acesso por período limitado</span></li>
+              <li>${checkIcon}<span class="feature-text"><strong>100 Mapas Mentais</strong></span></li>
+              <li>${checkIcon}<span class="feature-text"><strong>250 Questões Gabaritadas</strong></span></li>
+              <li>${checkIcon}<span class="feature-text"><strong>25 Simulados</strong></span></li>
+              <li>${checkIcon}<span class="feature-text">Acesso por período limitado</span></li>
             </ul>
 
-            <div class="price-row"><div><span>Pagamento único</span><strong><small>R$</small> 19,90</strong></div></div>
+            <div class="price-row"><div><strong><small>R$</small> 19,90</strong></div></div>
             <a class="cta cta-secondary" href="#" data-checkout="basico">QUERO O PACOTE BÁSICO</a>
-            <p class="access-note">Acesso digital • sem mensalidade</p>
+            <p class="access-note">Acesso enviado por e-mail</p>
           </article>
 
           <article class="price-card complete">
-            <span class="value-badge">MELHOR ESCOLHA</span>
+            <span class="value-badge">MELHOR OPÇÃO</span>
             <div class="plan-head">
               <p class="plan-kicker">EXPERIÊNCIA COMPLETA</p>
-              <h3>Pacote Completo</h3>
-              <p>Todo o material, bônus exclusivos e acesso vitalício.</p>
+              <h3>PACOTE COMPLETO</h3>
+              <p>Mais conteúdo, bônus exclusivos e acesso vitalício.</p>
             </div>
 
             <ul class="feature-list pricing-feature-list pricing-feature-list--complete">
-              <li><span class="feature-check">✅</span><span class="feature-text"><strong>+200 Mapas Mentais</strong></span></li>
-              <li><span class="feature-check">✅</span><span class="feature-text"><strong>+500 Questões Gabaritadas</strong></span></li>
-              <li><span class="feature-check">✅</span><span class="feature-text"><strong>+50 Simulados</strong></span></li>
-              <li><span class="feature-check">✅</span><span class="feature-text"><strong>3 Bônus Exclusivos</strong></span></li>
-              <li><span class="feature-check">✅</span><span class="feature-text"><strong>Acesso vitalício</strong></span></li>
-              <li><span class="feature-check">✅</span><span class="feature-text">Suporte 24 horas</span></li>
-              <li><span class="feature-check">✅</span><span class="feature-text">7 dias de garantia</span></li>
+              <li>${checkIcon}<span class="feature-text"><strong>+200 Mapas Mentais</strong></span></li>
+              <li>${checkIcon}<span class="feature-text"><strong>+500 Questões Gabaritadas</strong></span></li>
+              <li>${checkIcon}<span class="feature-text"><strong>+50 Simulados</strong></span></li>
+              <li>${checkIcon}<span class="feature-text">Acesso vitalício</span></li>
+              <li>${checkIcon}<span class="feature-text">Suporte 24 horas</span></li>
+              <li>${checkIcon}<span class="feature-text">7 dias de garantia</span></li>
+              <li class="bonus-divider"><span class="feature-text">- 3 MEGA BÔNUS</span></li>
+              <li>${checkIcon}<span class="feature-text">Cronograma de Estudos</span></li>
+              <li>${checkIcon}<span class="feature-text">Mural de Mnemônicos</span></li>
+              <li>${checkIcon}<span class="feature-text">Caderno de Erros</span></li>
             </ul>
 
-            <div class="price-row"><div><span>Pagamento único</span><strong><small>R$</small> 27,00</strong></div></div>
-            <a class="cta cta-primary" href="#" data-checkout="completo">QUERO O PACOTE COMPLETO</a>
-            <p class="access-note">Acesso vitalício • garantia de 7 dias</p>
+            <div class="price-row"><div><strong><small>R$</small> 27,00</strong></div></div>
+            <a class="cta cta-primary" href="#" data-checkout="completo">SIM! QUERO O PACOTE COMPLETO!</a>
+            <p class="access-note">Acesso enviado por e-mail</p>
           </article>
         </div>
       </div>`;
@@ -220,31 +230,50 @@
       const pricingStyle = document.createElement('style');
       pricingStyle.id = 'pricing-refresh-style';
       pricingStyle.textContent = `
-        #ofertas .pricing-heading-simple{max-width:650px;margin-bottom:28px}
+        @keyframes pricing-title-shift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+        @keyframes pricing-cta-shine{0%,58%{transform:translateX(-155%) skewX(-18deg)}82%,100%{transform:translateX(430%) skewX(-18deg)}}
+        #ofertas .pricing-heading-simple{max-width:680px;margin-bottom:30px}
         #ofertas .pricing-heading-simple h2{margin-inline:auto}
+        #ofertas .pricing-heading-simple>p{margin:12px auto 0;color:#556772;font-size:15px;line-height:1.55}
+        #ofertas .pricing-heading-simple>p strong{color:#122f3e;font-weight:800}
+        #ofertas .pricing-title-gradient{display:inline-block;color:transparent;background:linear-gradient(105deg,#1769d2 0%,#2f86e7 30%,#1599ad 58%,#10ae83 100%);background-size:220% 220%;background-clip:text;-webkit-background-clip:text;animation:pricing-title-shift 4.5s ease-in-out infinite}
         #ofertas .price-card{padding:25px 20px}
+        #ofertas .plan-head h3{font-size:25px;letter-spacing:.005em}
         #ofertas .plan-head p:last-child{margin-top:8px;font-size:13.5px;line-height:1.55}
         #ofertas .pricing-feature-list{margin-top:20px;border-top:1px solid #e5ece8}
-        #ofertas .pricing-feature-list li{position:relative;display:flex;align-items:flex-start;gap:10px;padding:12px 0;border-bottom:1px solid #edf2ef;color:#354a40;font-size:14px;line-height:1.45}
+        #ofertas .pricing-feature-list li{position:relative;display:flex;align-items:flex-start;gap:10px;padding:12px 0;border-bottom:1px solid #edf2ef;color:#151a18;font-size:14.5px;line-height:1.45}
         #ofertas .pricing-feature-list li::before{display:none!important;content:none!important}
-        #ofertas .feature-check{flex:0 0 auto;width:22px;font-size:17px;line-height:1.3}
-        #ofertas .feature-text{min-width:0;display:block}
-        #ofertas .feature-text strong{color:#223d32}
-        #ofertas .complete .feature-text strong{color:#164c3d}
+        #ofertas .feature-check{flex:0 0 22px;width:22px;height:22px;margin-top:0;fill:#e8f8f0;stroke:#078768;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+        #ofertas .feature-check circle{stroke:#9bd9c4;stroke-width:1.5}
+        #ofertas .feature-check path{fill:none;stroke:#078768;stroke-width:2.35}
+        #ofertas .feature-text{min-width:0;display:block;color:#151a18}
+        #ofertas .feature-text strong{color:#111614;font-weight:800}
+        #ofertas .bonus-divider{padding-top:16px;padding-bottom:9px;border-bottom:0;color:#0a6f53;font-size:12.5px;font-weight:900;letter-spacing:.045em;text-transform:uppercase}
+        #ofertas .bonus-divider+.pricing-feature-list{margin-top:0}
+        #ofertas .bonus-divider .feature-text{color:#0a6f53}
         #ofertas .price-row{padding:22px 0 16px}
-        #ofertas .price-row>div{align-items:flex-end}
+        #ofertas .price-row>div{display:flex;align-items:flex-end;justify-content:flex-end}
         #ofertas .price-row strong{white-space:nowrap}
         #ofertas .price-row strong small{font-size:16px;letter-spacing:0}
-        #ofertas .complete{background:linear-gradient(180deg,#fff 0%,#fbfffd 100%)}
-        #ofertas .complete .cta-primary{min-height:56px}
+        #ofertas .price-card.complete{border:2px solid transparent;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(125deg,#05a96f 0%,#2fe99a 42%,#079f6b 72%,#39f0a7 100%) border-box;box-shadow:0 24px 58px rgba(6,164,103,.22),0 0 24px rgba(16,174,131,.18)}
+        #ofertas .value-badge{background:linear-gradient(105deg,#057f59 0%,#11b679 45%,#35e598 100%);box-shadow:0 8px 20px rgba(8,135,104,.22);font-size:9.5px}
+        #ofertas .complete .cta-primary{position:relative;overflow:hidden;isolation:isolate;min-height:58px;background:linear-gradient(135deg,#0aa672 0%,#16c889 52%,#079968 100%);box-shadow:0 12px 30px rgba(8,157,105,.33),0 0 20px rgba(22,200,137,.18);font-size:14.5px;font-weight:700;letter-spacing:.015em}
+        #ofertas .complete .cta-primary::before{content:"";position:absolute;z-index:-1;top:-55%;left:-20%;width:27%;height:210%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);filter:blur(1px);animation:pricing-cta-shine 3.2s ease-in-out infinite}
         #ofertas .basic .cta-secondary{min-height:54px}
+        #ofertas .access-note{margin-top:11px;font-size:10.5px;color:#6f7c76}
         @media(max-width:719px){
-          #ofertas .pricing-heading-simple{margin-bottom:22px}
-          #ofertas .pricing-heading-simple h2{font-size:31px}
+          #ofertas .pricing-heading-simple{margin-bottom:23px}
+          #ofertas .pricing-heading-simple h2{font-size:32px}
+          #ofertas .pricing-heading-simple>p{font-size:14.5px}
           #ofertas .price-card{padding:23px 18px}
-          #ofertas .pricing-feature-list li{font-size:14.5px;padding:12px 0}
-          #ofertas .feature-check{font-size:18px;width:23px}
+          #ofertas .pricing-feature-list li{font-size:15px;padding:12px 0}
+          #ofertas .feature-check{flex-basis:23px;width:23px;height:23px}
           #ofertas .price-row strong{font-size:45px}
+          #ofertas .complete .cta-primary{font-size:15px;min-height:60px;padding-inline:14px}
+        }
+        @media(prefers-reduced-motion:reduce){
+          #ofertas .pricing-title-gradient{animation:none;background-position:50% 50%}
+          #ofertas .complete .cta-primary::before{animation:none;display:none}
         }
       `;
       document.head.appendChild(pricingStyle);
