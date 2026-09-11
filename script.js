@@ -24,12 +24,18 @@
       day: '2-digit',
       month: 'long'
     }).format(new Date());
-    target.innerHTML = `🔥 PROMOÇÃO DE <span style="display:inline-block;padding:2px 7px;margin:0 3px;border-radius:4px;background:#e30613;color:#ffe600;font-weight:900;box-shadow:0 0 0 1px rgba(255,230,0,.12) inset;">57% DE DESCONTO</span> SOMENTE HOJE, ${formatted.toUpperCase()}`;
+    target.innerHTML = `🔥 PROMOÇÃO <span style="display:inline-block;padding:2px 7px;margin:0 3px;border-radius:4px;background:#e30613;color:#ffe600;font-weight:900;box-shadow:0 0 0 1px rgba(255,230,0,.12) inset;">57% OFF</span> SOMENTE HOJE, ${formatted.toUpperCase()}`;
   }
 
   updateDate();
 
+  const heroSubtitle = document.querySelector('.hero-subtitle');
+  if (heroSubtitle) {
+    heroSubtitle.innerHTML = 'Pacote com <b>+200 mapas mentais</b>, <b>+500 questões</b>, <b>+50 simulados</b> e muito mais.';
+  }
+
   document.querySelectorAll('.hero .cta-reference').forEach((heroCta) => {
+    heroCta.href = '#ofertas';
     heroCta.innerHTML = `
       <svg class="cta-zap" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
@@ -87,8 +93,7 @@
     reviewsSection.innerHTML = `
       <div class="container reviews-container">
         <div class="reviews-heading">
-          <p>AVALIAÇÕES DOS CLIENTES</p>
-          <h2 id="reviews-title">Veja avaliações de alguns dos nossos clientes:</h2>
+          <h2 id="reviews-title">Mais de <span class="reviews-count-highlight">350</span> clientes satisfeitas!</h2>
         </div>
 
         <div class="reviews-shell" data-reviews-carousel role="region" aria-roledescription="carrossel" aria-label="Avaliações dos clientes">
