@@ -1,0 +1,25 @@
+/* Artes dos bônus — arquivos AVIF transparentes e otimizados para mobile */
+#bonus-exclusivos .bonus-visual {
+  background-color: transparent !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+}
+
+#bonus-exclusivos .bonus-visual::before,
+#bonus-exclusivos .bonus-visual::after {
+  content: none !important;
+  display: none !important;
+}
+
+#bonus-exclusivos .bonus-visual[data-bonus-image="cronograma"] {
+  background-image: url("/assets/cronograma-de-estudos.avif") !important;
+}
+
+#bonus-exclusivos .bonus-visual[data-bonus-image="mnemonicos"] {
+  background-image: url("/assets/mural-de-mnemonicos.avif") !important;
+}
+
+#bonus-exclusivos .bonus-visual[data-bonus-image="caderno-erros"] {
+  background-image: url("/assets/caderno-de-erros.avif") !important;
+}
