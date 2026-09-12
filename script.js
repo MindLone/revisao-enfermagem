@@ -222,7 +222,7 @@
                 <span class="complete-now-label">Hoje por apenas</span>
                 <strong class="complete-now-price"><small>R$</small> 27,00</strong>
               </div>
-              <div class="complete-installment">ou <strong>12x de R$ 2,25</strong> no cartão</div>
+              <div class="complete-installment">ou <strong>6x de R$ 5,37</strong> no cartão</div>
             </div>
 
             <a class="cta cta-primary" href="#" data-checkout="completo">SIM! QUERO O PACOTE COMPLETO!</a>
