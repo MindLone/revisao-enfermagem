@@ -1,4 +1,5 @@
 name: Assemble bonus images
+# Retry after validating all three optimized image chunks.
 
 on:
   push:
