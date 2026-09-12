@@ -50,11 +50,12 @@
   pointer-events: none;
 }
 
-/* Arte principal do Pacote Completo — abaixo da descrição real criada pelo script.js */
+/* Arte principal do Pacote Completo — demonstrativa, menor e centralizada */
 #ofertas .price-card.complete .plan-head::after {
   content: "";
   display: block;
-  width: 100%;
+  width: 66%;
+  max-width: 320px;
   aspect-ratio: 3 / 2;
   margin: 14px auto 10px;
   background-image: url("https://cdn.jsdelivr.net/gh/MindLone/revisao-enfermagem@dc98db0d9f424880b4fc549e38f4ef4f81fabe76/assets/PACOTE-COMPLETO.png");
@@ -79,8 +80,9 @@
   }
 
   #ofertas .price-card.complete .plan-head::after {
-    width: calc(100% + 14px);
-    margin: 12px -7px 8px;
+    width: 84%;
+    max-width: 280px;
+    margin: 10px auto 8px;
     aspect-ratio: 3 / 2;
   }
 }
