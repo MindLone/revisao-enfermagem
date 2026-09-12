@@ -23,3 +23,37 @@
 #bonus-exclusivos .bonus-visual[data-bonus-image="caderno-erros"] {
   background-image: url("https://raw.githubusercontent.com/MindLone/revisao-enfermagem/main/assets/CADERNO%20DE%20ERROS.png") !important;
 }
+
+/* Selo simples para deixar claro que os três bônus são gratuitos */
+#bonus-exclusivos .bonus-card::after {
+  content: "GRÁTIS";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 8;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 28px;
+  padding: 6px 11px;
+  border-radius: 999px;
+  background: #00A86F;
+  color: #ffffff;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 11.5px;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: .01em;
+  box-shadow: 0 5px 12px rgba(0, 168, 111, .20);
+  pointer-events: none;
+}
+
+@media (max-width: 759px) {
+  #bonus-exclusivos .bonus-card::after {
+    top: 9px;
+    right: 9px;
+    min-height: 26px;
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+}
