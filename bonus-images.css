@@ -50,6 +50,27 @@
   pointer-events: none;
 }
 
+/* Arte principal do Pacote Completo — usa o PNG transparente enviado em assets */
+.price-card.complete .plan-visual {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  min-height: 0 !important;
+  margin: 12px 0 16px;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background-color: transparent !important;
+  background-image: url("https://raw.githubusercontent.com/MindLone/revisao-enfermagem/main/assets/PACOTE-COMPLETO.png") !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  box-shadow: none !important;
+  overflow: visible;
+}
+
+.price-card.complete .plan-visual .mini-pack {
+  display: none !important;
+}
+
 @media (max-width: 759px) {
   #bonus-exclusivos .bonus-card::after {
     top: 6px;
@@ -57,5 +78,11 @@
     min-height: 26px;
     padding: 5px 10px;
     font-size: 11px;
+  }
+
+  .price-card.complete .plan-visual {
+    width: calc(100% + 8px);
+    margin: 10px -4px 14px;
+    aspect-ratio: 3 / 2;
   }
 }
