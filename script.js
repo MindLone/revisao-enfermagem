@@ -287,9 +287,9 @@
           #ofertas .price-row strong{font-size:45px}
           #ofertas .complete-discount-badge{margin-top:11px;padding:6px 11px;font-size:10.5px}
           #ofertas .complete-offer-price{padding:0}
-          #ofertas .complete-old-price{font-size:14.5px}
+          #ofertas .complete-old-price{font-size:15.5px;transform:translateY(15px)}
           #ofertas .complete-now-label{font-size:15px}
-          #ofertas .complete-now-price{font-size:47px}
+          #ofertas .complete-now-price{font-size:47px;filter:drop-shadow(0 2px 2px rgba(0,0,0,.14))}
           #ofertas .complete-installment{font-size:12px}
           #ofertas .complete-installment strong{font-size:13.5px}
           #ofertas .complete .cta-primary{font-size:15px;min-height:60px;padding-inline:14px}
