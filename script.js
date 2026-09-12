@@ -165,11 +165,7 @@
   }
 
   if (pricingSection) {
-    const checkIcon = `
-      <svg class="feature-check" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-        <circle cx="12" cy="12" r="9"></circle>
-        <path d="m8.2 12.2 2.45 2.45 5.35-5.35"></path>
-      </svg>`;
+    const checkIcon = '<span class="feature-check" aria-hidden="true">✔</span>';
 
     pricingSection.innerHTML = `
       <div class="container">
@@ -213,10 +209,10 @@
               <li>${checkIcon}<span class="feature-text">Acesso vitalício</span></li>
               <li>${checkIcon}<span class="feature-text">Suporte 24 horas</span></li>
               <li>${checkIcon}<span class="feature-text">7 dias de garantia</span></li>
-              <li class="bonus-divider"><span class="feature-text">- 3 MEGA BÔNUS</span></li>
-              <li>${checkIcon}<span class="feature-text">Cronograma de Estudos</span></li>
-              <li>${checkIcon}<span class="feature-text">Mural de Mnemônicos</span></li>
-              <li>${checkIcon}<span class="feature-text">Caderno de Erros</span></li>
+              <li class="bonus-divider"><span class="bonus-plus" aria-hidden="true">+</span><span class="feature-text">3 MEGA BÔNUS</span></li>
+              <li class="bonus-item-name">${checkIcon}<span class="feature-text">Cronograma de Estudos</span></li>
+              <li class="bonus-item-name">${checkIcon}<span class="feature-text">Mural de Mnemônicos</span></li>
+              <li class="bonus-item-name">${checkIcon}<span class="feature-text">Caderno de Erros</span></li>
             </ul>
 
             <div class="price-row"><div><strong><small>R$</small> 27,00</strong></div></div>
@@ -232,6 +228,7 @@
       pricingStyle.textContent = `
         @keyframes pricing-title-shift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
         @keyframes pricing-cta-shine{0%,58%{transform:translateX(-155%) skewX(-18deg)}82%,100%{transform:translateX(430%) skewX(-18deg)}}
+        .bonus-copy h3{color:#082b4c;font-weight:400;text-shadow:0 2px 9px rgba(8,43,76,.16)}
         #ofertas .pricing-heading-simple{max-width:680px;margin-bottom:30px}
         #ofertas .pricing-heading-simple h2{margin-inline:auto}
         #ofertas .pricing-heading-simple>p{margin:12px auto 0;color:#556772;font-size:15px;line-height:1.55}
@@ -243,14 +240,13 @@
         #ofertas .pricing-feature-list{margin-top:20px;border-top:1px solid #e5ece8}
         #ofertas .pricing-feature-list li{position:relative;display:flex;align-items:flex-start;gap:10px;padding:12px 0;border-bottom:1px solid #edf2ef;color:#151a18;font-size:14.5px;line-height:1.45}
         #ofertas .pricing-feature-list li::before{display:none!important;content:none!important}
-        #ofertas .feature-check{flex:0 0 22px;width:22px;height:22px;margin-top:0;fill:#e8f8f0;stroke:#078768;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-        #ofertas .feature-check circle{stroke:#9bd9c4;stroke-width:1.5}
-        #ofertas .feature-check path{fill:none;stroke:#078768;stroke-width:2.35}
+        #ofertas .feature-check{flex:0 0 23px;width:23px;height:23px;margin-top:0;display:grid;place-items:center;border-radius:50%;background:#078768;color:#fff;font-size:14px;font-weight:900;line-height:1;box-shadow:0 3px 8px rgba(7,135,104,.18)}
         #ofertas .feature-text{min-width:0;display:block;color:#151a18}
         #ofertas .feature-text strong{color:#111614;font-weight:800}
-        #ofertas .bonus-divider{padding-top:16px;padding-bottom:9px;border-bottom:0;color:#0a6f53;font-size:12.5px;font-weight:900;letter-spacing:.045em;text-transform:uppercase}
-        #ofertas .bonus-divider+.pricing-feature-list{margin-top:0}
-        #ofertas .bonus-divider .feature-text{color:#0a6f53}
+        #ofertas .bonus-divider{align-items:center;padding-top:16px;padding-bottom:10px;border-bottom:0;color:#0a6f53;font-size:12.5px;font-weight:900;letter-spacing:.045em;text-transform:uppercase}
+        #ofertas .bonus-divider .bonus-plus{flex:0 0 27px;width:27px;height:27px;display:grid;place-items:center;border-radius:7px;background:#1769d2;color:#fff;font-size:19px;font-weight:900;line-height:1;box-shadow:0 5px 12px rgba(23,105,210,.18)}
+        #ofertas .bonus-divider .feature-text{color:#123d72}
+        #ofertas .bonus-item-name .feature-text{color:#082b4c;font-weight:400;text-shadow:0 2px 9px rgba(8,43,76,.16)}
         #ofertas .price-row{padding:22px 0 16px}
         #ofertas .price-row>div{display:flex;align-items:flex-end;justify-content:flex-end}
         #ofertas .price-row strong{white-space:nowrap}
@@ -267,7 +263,7 @@
           #ofertas .pricing-heading-simple>p{font-size:14.5px}
           #ofertas .price-card{padding:23px 18px}
           #ofertas .pricing-feature-list li{font-size:15px;padding:12px 0}
-          #ofertas .feature-check{flex-basis:23px;width:23px;height:23px}
+          #ofertas .feature-check{flex-basis:24px;width:24px;height:24px;font-size:15px}
           #ofertas .price-row strong{font-size:45px}
           #ofertas .complete .cta-primary{font-size:15px;min-height:60px;padding-inline:14px}
         }
