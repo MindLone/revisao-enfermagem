@@ -262,15 +262,15 @@
         #ofertas .price-row strong small{font-size:16px;letter-spacing:0}
         #ofertas .price-card.complete{border:2px solid transparent;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(125deg,#05a96f 0%,#2fe99a 42%,#079f6b 72%,#39f0a7 100%) border-box;box-shadow:0 24px 58px rgba(6,164,103,.22),0 0 24px rgba(16,174,131,.18)}
         #ofertas .value-badge{background:linear-gradient(105deg,#057f59 0%,#11b679 45%,#35e598 100%);box-shadow:0 8px 20px rgba(8,135,104,.22);font-size:9.5px}
-        #ofertas .complete-discount-badge{display:table;margin:18px auto 6px;padding:6px 13px;border:0;border-radius:9px;text-align:center;color:#fff;background:linear-gradient(105deg,#ffb000 0%,#ff7417 50%,#e93621 100%);box-shadow:0 7px 15px rgba(224,74,25,.18);text-shadow:0 0 7px rgba(255,255,255,.58);font-size:10.5px;font-weight:900;letter-spacing:.03em}
+        #ofertas .complete-discount-badge{display:table;margin:13px auto 3px;padding:6px 13px;border:0;border-radius:9px;text-align:center;color:#fff;background:linear-gradient(105deg,#ffb000 0%,#ff7417 50%,#e93621 100%);box-shadow:0 7px 15px rgba(224,74,25,.18);font-size:10.5px;font-weight:900;letter-spacing:.03em;transform:translateY(-7px)}
         #ofertas .complete-offer-price{margin:0 0 16px;padding:0;border:0;border-radius:0;background:transparent}
-        #ofertas .complete-old-price{color:#7d8581;font-size:13px;font-weight:600;line-height:1.2}
+        #ofertas .complete-old-price{margin-bottom:-1px;color:#7d8581;font-size:14.5px;font-weight:600;line-height:1.05}
         #ofertas .complete-old-price span{position:relative;display:inline-block;margin-left:3px;color:#7b817e;font-weight:700}
         #ofertas .complete-old-price span::after{content:"";position:absolute;left:-3px;right:-3px;top:52%;height:2px;border-radius:999px;background:#e22929;box-shadow:0 1px 5px rgba(226,41,41,.45);transform:rotate(-6deg);transform-origin:center}
-        #ofertas .complete-now-row{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;margin-top:2px}
+        #ofertas .complete-now-row{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;margin-top:0}
         #ofertas .complete-now-label{padding-bottom:4px;color:#273b32;font-size:15px;font-weight:800;line-height:1.15}
-        #ofertas .complete-now-price{white-space:nowrap;color:transparent;background:linear-gradient(115deg,#087c4f 0%,#08b56f 45%,#25e492 100%);background-clip:text;-webkit-background-clip:text;font-size:51px;line-height:.9;letter-spacing:-.05em;-webkit-text-stroke:1.15px rgba(0,0,0,.72);paint-order:stroke fill;filter:drop-shadow(0 2px 1px rgba(0,0,0,.30))}
-        #ofertas .complete-now-price small{font-size:17px;letter-spacing:0;-webkit-text-stroke:.75px rgba(0,0,0,.68)}
+        #ofertas .complete-now-price{white-space:nowrap;color:transparent;background:linear-gradient(180deg,#27f39a 0%,#12dc7d 38%,#08bd69 65%,#07844d 84%,#111713 100%);background-clip:text;-webkit-background-clip:text;font-family:"Arial Black","Trebuchet MS",Arial,sans-serif;font-size:51px;font-weight:900;line-height:.9;letter-spacing:-.055em;font-variant-numeric:tabular-nums;filter:drop-shadow(0 2px 1px rgba(0,0,0,.18))}
+        #ofertas .complete-now-price small{font-family:inherit;font-size:17px;font-weight:900;letter-spacing:0}
         #ofertas .complete-installment{margin-top:7px;text-align:right;color:#60737f;font-size:12px;font-weight:600}
         #ofertas .complete-installment strong{color:#1769d2;font-size:14px;font-weight:900}
         #ofertas .complete .cta-primary{position:relative;overflow:hidden;isolation:isolate;min-height:58px;background:linear-gradient(135deg,#0aa672 0%,#16c889 52%,#079968 100%);box-shadow:0 12px 30px rgba(8,157,105,.33),0 0 20px rgba(22,200,137,.18);font-size:14.5px;font-weight:700;letter-spacing:.015em}
@@ -285,8 +285,9 @@
           #ofertas .pricing-feature-list li{font-size:15px;padding:12px 0}
           #ofertas .feature-check{flex-basis:24px;width:24px;height:24px;font-size:15px}
           #ofertas .price-row strong{font-size:45px}
-          #ofertas .complete-discount-badge{margin-top:16px;padding:6px 11px;font-size:10.5px}
+          #ofertas .complete-discount-badge{margin-top:11px;padding:6px 11px;font-size:10.5px}
           #ofertas .complete-offer-price{padding:0}
+          #ofertas .complete-old-price{font-size:14.5px}
           #ofertas .complete-now-label{font-size:15px}
           #ofertas .complete-now-price{font-size:47px}
           #ofertas .complete-installment{font-size:12px}
@@ -295,7 +296,7 @@
         }
         @media(max-width:390px){
           #ofertas .complete-now-row{gap:7px}
-          #ofertas .complete-now-label{font-size:14px}
+          #ofertas .complete-now-label{font-size:14.5px}
           #ofertas .complete-now-price{font-size:43px}
         }
         @media(prefers-reduced-motion:reduce){
