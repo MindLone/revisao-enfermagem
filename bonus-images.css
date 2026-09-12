@@ -50,7 +50,9 @@
   line-height: 1;
   font-weight: 900;
   letter-spacing: .01em;
-  box-shadow: 0 5px 12px rgba(0, 168, 111, .20);
+  box-shadow:
+    0 4px 12px rgba(0, 168, 111, .20),
+    0 0 9px rgba(0, 168, 111, .14);
   pointer-events: none;
 }
 
