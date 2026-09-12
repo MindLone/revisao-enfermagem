@@ -737,3 +737,10 @@
     flex-basis:79vw;
   }
 }
+
+/* Mantém o preço antigo mais próximo da oferta também no desktop, sem mover os demais elementos. */
+@media(min-width:720px){
+  #ofertas .complete-old-price{
+    transform:translateY(10px)!important;
+  }
+}
