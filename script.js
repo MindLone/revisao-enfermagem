@@ -326,8 +326,8 @@
   }
 
   const CHECKOUTS = {
-    basico: '',
-    completo: ''
+    basico: 'https://pay.wiapy.com/EjGcghAid3lO',
+    completo: 'https://pay.wiapy.com/NGRHeQfp1_WI'
   };
 
   document.querySelectorAll('[data-checkout]').forEach((link) => {
