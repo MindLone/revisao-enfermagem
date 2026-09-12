@@ -24,24 +24,12 @@
   background-image: url("https://raw.githubusercontent.com/MindLone/revisao-enfermagem/main/assets/CADERNO%20DE%20ERROS.png") !important;
 }
 
-/* Dá mais respiro entre o título e os cards sem mexer na posição das artes */
-#bonus-exclusivos .bonus-heading {
-  margin-bottom: 32px;
-  transform: translateY(-4px);
-}
-
-/* Permite que o selo atravesse a borda superior do card */
-#bonus-exclusivos .bonus-card {
-  overflow: visible;
-}
-
-/* Selo GRÁTIS apoiado diretamente sobre a linha superior */
+/* Selo GRÁTIS dentro do card, bem próximo da borda superior para evitar conflito no mobile */
 #bonus-exclusivos .bonus-card::after {
   content: "GRÁTIS";
   position: absolute;
-  top: 0;
-  right: 14px;
-  transform: translateY(-50%);
+  top: 8px;
+  right: 10px;
   z-index: 8;
   display: inline-flex;
   align-items: center;
@@ -63,14 +51,9 @@
 }
 
 @media (max-width: 759px) {
-  #bonus-exclusivos .bonus-heading {
-    margin-bottom: 42px;
-    transform: translateY(-5px);
-  }
-
   #bonus-exclusivos .bonus-card::after {
-    top: 0;
-    right: 12px;
+    top: 6px;
+    right: 8px;
     min-height: 26px;
     padding: 5px 10px;
     font-size: 11px;
