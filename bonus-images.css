@@ -1,4 +1,4 @@
-/* Artes finais dos 3 bônus — PNGs enviados para /assets */
+/* Artes finais dos 3 bônus — PNGs hospedados no GitHub */
 #bonus-exclusivos .bonus-visual {
   background-color: transparent !important;
   background-position: center !important;
@@ -13,13 +13,13 @@
 }
 
 #bonus-exclusivos .bonus-visual[data-bonus-image="cronograma"] {
-  background-image: url("/assets/CRONOGRAMA.png") !important;
+  background-image: url("https://raw.githubusercontent.com/MindLone/revisao-enfermagem/main/assets/CRONOGRAMA.png") !important;
 }
 
 #bonus-exclusivos .bonus-visual[data-bonus-image="mnemonicos"] {
-  background-image: url("/assets/MNEMONICOS.png") !important;
+  background-image: url("https://raw.githubusercontent.com/MindLone/revisao-enfermagem/main/assets/MNEMONICOS.png") !important;
 }
 
 #bonus-exclusivos .bonus-visual[data-bonus-image="caderno-erros"] {
-  background-image: url("/assets/CADERNO%20DE%20ERROS.png") !important;
+  background-image: url("https://raw.githubusercontent.com/MindLone/revisao-enfermagem/main/assets/CADERNO%20DE%20ERROS.png") !important;
 }
