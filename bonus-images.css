@@ -50,12 +50,12 @@
   pointer-events: none;
 }
 
-/* Arte principal do Pacote Completo — demonstrativa, menor e centralizada */
+/* Arte principal do Pacote Completo — tamanho médio e centralizada */
 #ofertas .price-card.complete .plan-head::after {
   content: "";
   display: block;
-  width: 66%;
-  max-width: 320px;
+  width: 80%;
+  max-width: 390px;
   aspect-ratio: 3 / 2;
   margin: 14px auto 10px;
   background-image: url("https://cdn.jsdelivr.net/gh/MindLone/revisao-enfermagem@dc98db0d9f424880b4fc549e38f4ef4f81fabe76/assets/PACOTE-COMPLETO.png");
@@ -80,8 +80,8 @@
   }
 
   #ofertas .price-card.complete .plan-head::after {
-    width: 84%;
-    max-width: 280px;
+    width: 92%;
+    max-width: 320px;
     margin: 10px auto 8px;
     aspect-ratio: 3 / 2;
   }
