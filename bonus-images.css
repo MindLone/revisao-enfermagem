@@ -24,6 +24,12 @@
   background-image: url("https://raw.githubusercontent.com/MindLone/revisao-enfermagem/main/assets/CADERNO%20DE%20ERROS.png") !important;
 }
 
+/* Dá mais respiro entre o título e os cards sem mexer na posição das artes */
+#bonus-exclusivos .bonus-heading {
+  margin-bottom: 32px;
+  transform: translateY(-4px);
+}
+
 /* Permite que o selo atravesse a borda superior do card */
 #bonus-exclusivos .bonus-card {
   overflow: visible;
@@ -57,6 +63,11 @@
 }
 
 @media (max-width: 759px) {
+  #bonus-exclusivos .bonus-heading {
+    margin-bottom: 42px;
+    transform: translateY(-5px);
+  }
+
   #bonus-exclusivos .bonus-card::after {
     top: 0;
     right: 12px;
