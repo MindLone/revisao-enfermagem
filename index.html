@@ -12,6 +12,63 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MindLone/revisao-enfermagem@18720444058a6e637188afdbaf2537337ed14217/home-tweaks.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MindLone/revisao-enfermagem@18720444058a6e637188afdbaf2537337ed14217/bonus-images.css" />
   <script src="https://cdn.jsdelivr.net/gh/MindLone/revisao-enfermagem@18720444058a6e637188afdbaf2537337ed14217/script.js" defer></script>
+  <style id="reviews-real-images-style">
+    #avaliacoes .reviews-track{
+      align-items:flex-start;
+    }
+
+    #avaliacoes .review-shot{
+      flex:0 0 min(76vw,300px);
+      width:min(76vw,300px);
+      height:auto;
+      aspect-ratio:auto;
+      display:block;
+      overflow:hidden;
+      background:#fff;
+      border:1px solid rgba(91,214,220,.46);
+      border-radius:16px;
+    }
+
+    #avaliacoes .review-shot img{
+      display:block;
+      width:100%;
+      height:auto;
+      max-height:none;
+      object-fit:contain;
+      object-position:top center;
+      user-select:none;
+      -webkit-user-drag:none;
+    }
+
+    @media(min-width:760px){
+      #avaliacoes .review-shot{
+        flex-basis:280px;
+        width:280px;
+      }
+    }
+
+    @media(min-width:940px){
+      #avaliacoes .review-shot{
+        flex-basis:286px;
+        width:286px;
+      }
+    }
+
+    @media(max-width:560px){
+      #avaliacoes .review-shot{
+        flex-basis:min(78vw,294px);
+        width:min(78vw,294px);
+        border-radius:15px;
+      }
+    }
+
+    @media(max-width:390px){
+      #avaliacoes .review-shot{
+        flex-basis:min(80vw,286px);
+        width:min(80vw,286px);
+      }
+    }
+  </style>
   <title>Revisão de Enfermagem | Concursos 2026</title>
 </head>
 <body>
@@ -348,5 +405,25 @@
       <div class="footer-note">Revisão de Enfermagem não possui vínculo oficial com bancas organizadoras, órgãos públicos ou concursos citados. © 2026 Revisão de Enfermagem.</div>
     </div>
   </footer>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const reviewsTrack = document.querySelector('#avaliacoes .reviews-track');
+      if (!reviewsTrack) return;
+
+      const reviews = [
+        { name: 'João Victor', file: 'Joao-Victor.png' },
+        { name: 'Maria Lucia', file: 'Maria-Lucia.png' },
+        { name: 'Heloisa', file: 'heloisa-enfermeira.png' },
+        { name: 'Kennedy', file: 'Kennedy.png' },
+        { name: 'Juliana', file: 'Juliana-msg.png' }
+      ];
+
+      reviewsTrack.innerHTML = reviews.map(({ name, file }, index) => `
+        <article class="review-shot" data-review-image="${index + 1}" aria-label="Avaliação de ${name}">
+          <img src="assets/${file}" alt="Avaliação de ${name}" loading="lazy" decoding="async" draggable="false" />
+        </article>`).join('');
+    });
+  </script>
 </body>
 </html>
