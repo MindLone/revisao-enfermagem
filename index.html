@@ -80,7 +80,9 @@
   <script>
     window.addEventListener('DOMContentLoaded', () => {
       const reviewsTrack = document.querySelector('#avaliacoes .reviews-track');
-      if (!reviewsTrack) return;
+      const reviewsViewport = document.querySelector('#avaliacoes [data-reviews-viewport]');
+      if (!reviewsTrack || !reviewsViewport) return;
+
       const reviews = [
         { name: 'João Victor', file: 'Joao-Victor.png' },
         { name: 'Maria Lucia', file: 'Maria-Lucia.png' },
@@ -88,6 +90,7 @@
         { name: 'Kennedy', file: 'Kennedy.png' },
         { name: 'Juliana', file: 'Juliana-msg.png' }
       ];
+
       const cards = Array.from(reviewsTrack.querySelectorAll('.review-shot'));
       reviews.forEach(({ name, file }, index) => {
         const card = cards[index];
@@ -97,6 +100,84 @@
         card.innerHTML = `<img src="https://raw.githubusercontent.com/MindLone/revisao-enfermagem/main/assets/${file}" alt="Avaliação de ${name}" loading="lazy" decoding="async" draggable="false" />`;
       });
       cards.slice(reviews.length).forEach((card) => card.remove());
+
+      const originals = Array.from(reviewsTrack.querySelectorAll('.review-shot'));
+      if (originals.length < 2) return;
+
+      const cloneSet = () => originals.map((card) => {
+        const clone = card.cloneNode(true);
+        clone.dataset.reviewClone = 'true';
+        clone.setAttribute('aria-hidden', 'true');
+        clone.removeAttribute('aria-label');
+        const image = clone.querySelector('img');
+        if (image) image.alt = '';
+        return clone;
+      });
+
+      const beforeFirst = cloneSet();
+      const beforeSecond = cloneSet();
+      const afterFirst = cloneSet();
+      const afterSecond = cloneSet();
+
+      const beforeFragment = document.createDocumentFragment();
+      [...beforeFirst, ...beforeSecond].forEach((card) => beforeFragment.appendChild(card));
+      reviewsTrack.insertBefore(beforeFragment, originals[0]);
+
+      const afterFragment = document.createDocumentFragment();
+      [...afterFirst, ...afterSecond].forEach((card) => afterFragment.appendChild(card));
+      reviewsTrack.appendChild(afterFragment);
+
+      let cycleWidth = 0;
+      let middleOffset = 0;
+      let normalizeTimer = null;
+
+      const measureLoop = () => {
+        cycleWidth = afterFirst[0].offsetLeft - originals[0].offsetLeft;
+        middleOffset = originals[0].offsetLeft - beforeFirst[0].offsetLeft;
+      };
+
+      const normalizePosition = () => {
+        if (!cycleWidth) measureLoop();
+        if (!cycleWidth) return;
+
+        const left = reviewsViewport.scrollLeft;
+        const lowerLimit = middleOffset - cycleWidth * 0.75;
+        const upperLimit = middleOffset + cycleWidth * 0.75;
+
+        if (left < lowerLimit) {
+          reviewsViewport.scrollLeft = left + cycleWidth;
+        } else if (left > upperLimit) {
+          reviewsViewport.scrollLeft = left - cycleWidth;
+        }
+      };
+
+      const scheduleNormalize = () => {
+        window.clearTimeout(normalizeTimer);
+        normalizeTimer = window.setTimeout(normalizePosition, 120);
+      };
+
+      reviewsViewport.addEventListener('scroll', scheduleNormalize, { passive: true });
+      if ('onscrollend' in reviewsViewport) {
+        reviewsViewport.addEventListener('scrollend', normalizePosition, { passive: true });
+      }
+
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          measureLoop();
+          reviewsViewport.scrollLeft = middleOffset;
+        });
+      });
+
+      window.addEventListener('resize', () => {
+        const previousCycle = cycleWidth;
+        const previousMiddle = middleOffset;
+        const relativePosition = previousCycle
+          ? (reviewsViewport.scrollLeft - previousMiddle) / previousCycle
+          : 0;
+
+        measureLoop();
+        reviewsViewport.scrollLeft = middleOffset + relativePosition * cycleWidth;
+      }, { passive: true });
     });
   </script>
 </body>
