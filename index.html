@@ -7,7 +7,7 @@
   <meta name="description" content="Revisão de Enfermagem para concursos 2026 com mapas mentais, flashcards, questões, simulados e guias de revisão." />
   <link rel="canonical" href="https://revisaoenfermagem.shop/" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="preload" href="/_vercel/image?url=%2Fassets%2Flogo-revisao-enfermagem-2026-transparente.png&w=512&q=75" as="image" />
+  <link rel="preload" href="/_vercel/image?url=https%3A%2F%2Fraw.githubusercontent.com%2FMindLone%2Frevisao-enfermagem%2Fmain%2Fassets%2Flogo-revisao-enfermagem-2026-transparente.png&w=512&q=75" as="image" />
   <link rel="stylesheet" href="/styles.css" />
   <link rel="stylesheet" href="/home-tweaks.css" />
   <link rel="stylesheet" href="/bonus-images.css" />
@@ -97,7 +97,7 @@
         if (!card) return;
         card.dataset.reviewImage = String(index + 1);
         card.setAttribute('aria-label', `Avaliação de ${name}`);
-        card.innerHTML = `<img src="/_vercel/image?url=%2Fassets%2F${encodeURIComponent(file)}&w=640&q=70" alt="Avaliação de ${name}" width="720" height="1474" loading="lazy" decoding="async" fetchpriority="low" draggable="false" />`;
+        card.innerHTML = `<img src="/_vercel/image?url=${encodeURIComponent('https://raw.githubusercontent.com/MindLone/revisao-enfermagem/main/assets/' + file)}&w=640&q=70" alt="Avaliação de ${name}" width="720" height="1474" loading="lazy" decoding="async" fetchpriority="low" draggable="false" />`;
       });
       cards.slice(reviews.length).forEach((card) => card.remove());
 
