@@ -28,7 +28,16 @@
       "image/webp"
     ],
     "dangerouslyAllowSVG": false,
-    "contentDispositionType": "inline"
+    "contentDispositionType": "inline",
+    "remotePatterns": [
+      {
+        "protocol": "https",
+        "hostname": "raw.githubusercontent.com",
+        "port": "",
+        "pathname": "^/MindLone/revisao-enfermagem/main/assets/.*$",
+        "search": ""
+      }
+    ]
   },
   "headers": [
     {
