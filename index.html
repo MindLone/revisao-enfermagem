@@ -6,12 +6,12 @@
   <meta name="theme-color" content="#f7fbf9" />
   <meta name="description" content="Revisão de Enfermagem para concursos 2026 com mapas mentais, flashcards, questões, simulados e guias de revisão." />
   <link rel="canonical" href="https://revisaoenfermagem.shop/" />
-  <link rel="icon" href="https://raw.githubusercontent.com/MindLone/revisao-enfermagem/main/favicon.svg" type="image/svg+xml" />
-  <link rel="preload" href="https://raw.githubusercontent.com/MindLone/revisao-enfermagem/main/assets/logo-revisao-enfermagem-2026-transparente.png" as="image" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MindLone/revisao-enfermagem@18720444058a6e637188afdbaf2537337ed14217/styles.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MindLone/revisao-enfermagem@18720444058a6e637188afdbaf2537337ed14217/home-tweaks.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MindLone/revisao-enfermagem@18720444058a6e637188afdbaf2537337ed14217/bonus-images.css" />
-  <script src="https://cdn.jsdelivr.net/gh/MindLone/revisao-enfermagem@18720444058a6e637188afdbaf2537337ed14217/script.js" defer></script>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preload" href="/_vercel/image?url=%2Fassets%2Flogo-revisao-enfermagem-2026-transparente.png&w=512&q=75" as="image" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/home-tweaks.css" />
+  <link rel="stylesheet" href="/bonus-images.css" />
+  <script src="/script.js" defer></script>
   <style id="reviews-real-images-style">
     #avaliacoes .reviews-track{align-items:flex-start}
     #avaliacoes .review-shot{flex:0 0 min(76vw,300px);width:min(76vw,300px);height:auto;aspect-ratio:auto;display:block;overflow:hidden;background:#fff;border:1px solid rgba(91,214,220,.46);border-radius:16px}
@@ -29,7 +29,7 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <img class="hero-logo" src="https://raw.githubusercontent.com/MindLone/revisao-enfermagem/main/assets/logo-revisao-enfermagem-2026-transparente.png" alt="Revisão de Enfermagem — Concursos 2026" width="900" height="900" fetchpriority="high" />
+          <img class="hero-logo" src="/_vercel/image?url=%2Fassets%2Flogo-revisao-enfermagem-2026-transparente.png&w=512&q=75" alt="Revisão de Enfermagem — Concursos 2026" fetchpriority="high" decoding="async" />
           <p class="eyebrow hero-countdown" data-exam-countdown>SES-TO • FALTAM 52 DIAS PARA A PROVA</p>
           <h1 id="hero-title">Prepare-se para o <span class="highlight">Concurso de Enfermagem</span>.</h1>
           <p class="hero-subtitle"><b>Área de Membros Premium</b> com <b>+200 mapas mentais</b>, <b>+500 questões</b>, <b>+50 simulados</b> e muito mais.</p>
@@ -97,7 +97,7 @@
         if (!card) return;
         card.dataset.reviewImage = String(index + 1);
         card.setAttribute('aria-label', `Avaliação de ${name}`);
-        card.innerHTML = `<img src="https://raw.githubusercontent.com/MindLone/revisao-enfermagem/main/assets/${file}" alt="Avaliação de ${name}" loading="lazy" decoding="async" draggable="false" />`;
+        card.innerHTML = `<img src="/_vercel/image?url=%2Fassets%2F${encodeURIComponent(file)}&w=640&q=70" alt="Avaliação de ${name}" width="720" height="1474" loading="lazy" decoding="async" fetchpriority="low" draggable="false" />`;
       });
       cards.slice(reviews.length).forEach((card) => card.remove());
 
