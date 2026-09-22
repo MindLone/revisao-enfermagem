@@ -330,10 +330,31 @@
     completo: 'https://pay.wiapy.com/NGRHeQfp1_WI'
   };
 
+  const CHECKOUT_META = {
+    basico: { name: 'Pacote Básico', value: 19.90 },
+    completo: { name: 'Pacote Completo', value: 27.00 }
+  };
+
   document.querySelectorAll('[data-checkout]').forEach((link) => {
     const plan = link.dataset.checkout;
     const url = CHECKOUTS[plan];
-    if (url) link.href = url;
-    else link.addEventListener('click', (event) => event.preventDefault());
+
+    if (url) {
+      link.href = url;
+
+      link.addEventListener('click', () => {
+        const meta = CHECKOUT_META[plan];
+        if (meta && typeof window.fbq === 'function') {
+          window.fbq('track', 'InitiateCheckout', {
+            content_name: meta.name,
+            content_category: 'Material educacional',
+            value: meta.value,
+            currency: 'BRL'
+          });
+        }
+      });
+    } else {
+      link.addEventListener('click', (event) => event.preventDefault());
+    }
   });
 })();
