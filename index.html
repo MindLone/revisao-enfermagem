@@ -50,6 +50,76 @@
     @media(max-width:560px){#avaliacoes .review-shot{flex-basis:min(78vw,294px);width:min(78vw,294px);border-radius:15px}}
     @media(max-width:390px){#avaliacoes .review-shot{flex-basis:min(80vw,286px);width:min(80vw,286px)}}
   </style>
+  <style id="pricing-refresh-style">
+        @keyframes pricing-title-shift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+        @keyframes pricing-cta-shine{0%,58%{transform:translateX(-155%) skewX(-18deg)}82%,100%{transform:translateX(430%) skewX(-18deg)}}
+        .bonus-copy h3{color:#082b4c;font-weight:400;text-shadow:0 2px 9px rgba(8,43,76,.16)}
+        #ofertas .pricing-heading-simple{max-width:680px;margin-bottom:30px}
+        #ofertas .pricing-heading-simple h2{margin-inline:auto}
+        #ofertas .pricing-heading-simple>p{margin:12px auto 0;color:#556772;font-size:15px;line-height:1.55}
+        #ofertas .pricing-heading-simple>p strong{color:#122f3e;font-weight:800}
+        #ofertas .pricing-title-gradient{display:inline-block;color:transparent;background:linear-gradient(105deg,#1769d2 0%,#2f86e7 30%,#1599ad 58%,#10ae83 100%);background-size:220% 220%;background-clip:text;-webkit-background-clip:text;animation:pricing-title-shift 4.5s ease-in-out infinite}
+        #ofertas .price-card{padding:25px 20px}
+        #ofertas .plan-head h3{font-size:25px;letter-spacing:.005em}
+        #ofertas .plan-head p:last-child{margin-top:8px;font-size:13.5px;line-height:1.55}
+        #ofertas .pricing-feature-list{margin-top:20px;border-top:1px solid #e5ece8}
+        #ofertas .pricing-feature-list li{position:relative;display:flex;align-items:flex-start;gap:10px;padding:12px 0;border-bottom:1px solid #edf2ef;color:#151a18;font-size:14.5px;line-height:1.45}
+        #ofertas .pricing-feature-list li::before{display:none!important;content:none!important}
+        #ofertas .feature-check{flex:0 0 23px;width:23px;height:23px;margin-top:0;display:grid;place-items:center;border-radius:50%;background:#078768;color:#fff;font-size:14px;font-weight:900;line-height:1;box-shadow:0 3px 8px rgba(7,135,104,.18)}
+        #ofertas .feature-text{min-width:0;display:block;color:#151a18}
+        #ofertas .feature-text strong{color:#111614;font-weight:800}
+        #ofertas .bonus-divider{align-items:center;padding-top:16px;padding-bottom:10px;border-bottom:0;color:#0a6f53;font-size:12.5px;font-weight:900;letter-spacing:.045em;text-transform:uppercase}
+        #ofertas .bonus-divider .bonus-plus{flex:0 0 27px;width:27px;height:27px;display:grid;place-items:center;border-radius:7px;background:#1769d2;color:#fff;font-size:19px;font-weight:900;line-height:1;box-shadow:0 5px 12px rgba(23,105,210,.18)}
+        #ofertas .bonus-divider .feature-text{color:#123d72}
+        #ofertas .bonus-item-name .feature-text{color:#082b4c;font-weight:400;text-shadow:0 2px 9px rgba(8,43,76,.16)}
+        #ofertas .price-row{padding:22px 0 16px}
+        #ofertas .price-row>div{display:flex;align-items:flex-end;justify-content:flex-end}
+        #ofertas .price-row strong{white-space:nowrap}
+        #ofertas .price-row strong small{font-size:16px;letter-spacing:0}
+        #ofertas .price-card.complete{border:2px solid transparent;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(125deg,#05a96f 0%,#2fe99a 42%,#079f6b 72%,#39f0a7 100%) border-box;box-shadow:0 24px 58px rgba(6,164,103,.22),0 0 24px rgba(16,174,131,.18)}
+        #ofertas .value-badge{background:linear-gradient(105deg,#057f59 0%,#11b679 45%,#35e598 100%);box-shadow:0 8px 20px rgba(8,135,104,.22);font-size:9.5px}
+        #ofertas .complete-discount-badge{display:table;margin:13px auto 3px;padding:6px 13px;border:0;border-radius:9px;text-align:center;color:#fff;background:linear-gradient(105deg,#ffb000 0%,#ff7417 50%,#e93621 100%);box-shadow:0 7px 15px rgba(224,74,25,.18);font-size:10.5px;font-weight:900;letter-spacing:.03em;transform:translateY(-7px)}
+        #ofertas .complete-offer-price{margin:0 0 16px;padding:0;border:0;border-radius:0;background:transparent}
+        #ofertas .complete-old-price{margin-bottom:-1px;color:#7d8581;font-size:14.5px;font-weight:600;line-height:1.05}
+        #ofertas .complete-old-price span{position:relative;display:inline-block;margin-left:3px;color:#7b817e;font-weight:700}
+        #ofertas .complete-old-price span::after{content:"";position:absolute;left:-3px;right:-3px;top:52%;height:2px;border-radius:999px;background:#e22929;box-shadow:0 1px 5px rgba(226,41,41,.45);transform:rotate(-6deg);transform-origin:center}
+        #ofertas .complete-now-row{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;margin-top:0}
+        #ofertas .complete-now-label{padding-bottom:4px;color:#273b32;font-size:15px;font-weight:800;line-height:1.15}
+        #ofertas .complete-now-price{white-space:nowrap;color:transparent;background:linear-gradient(180deg,#27f39a 0%,#12dc7d 38%,#08bd69 65%,#07844d 84%,#111713 100%);background-clip:text;-webkit-background-clip:text;font-family:"Arial Black","Trebuchet MS",Arial,sans-serif;font-size:51px;font-weight:900;line-height:.9;letter-spacing:-.055em;font-variant-numeric:tabular-nums;filter:drop-shadow(0 2px 1px rgba(0,0,0,.18))}
+        #ofertas .complete-now-price small{font-family:inherit;font-size:17px;font-weight:900;letter-spacing:0}
+        #ofertas .complete-installment{margin-top:7px;text-align:right;color:#60737f;font-size:12px;font-weight:600}
+        #ofertas .complete-installment strong{color:#1769d2;font-size:14px;font-weight:900}
+        #ofertas .complete .cta-primary{position:relative;overflow:hidden;isolation:isolate;min-height:58px;background:linear-gradient(135deg,#0aa672 0%,#16c889 52%,#079968 100%);box-shadow:0 12px 30px rgba(8,157,105,.33),0 0 20px rgba(22,200,137,.18);font-size:14.5px;font-weight:700;letter-spacing:.015em}
+        #ofertas .complete .cta-primary::before{content:"";position:absolute;z-index:-1;top:-55%;left:-20%;width:27%;height:210%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);filter:blur(1px);animation:pricing-cta-shine 3.2s ease-in-out infinite}
+        #ofertas .basic .cta-secondary{min-height:54px}
+        #ofertas .access-note{margin-top:11px;font-size:10.5px;color:#6f7c76}
+        @media(max-width:719px){
+          #ofertas .pricing-heading-simple{margin-bottom:23px}
+          #ofertas .pricing-heading-simple h2{font-size:32px}
+          #ofertas .pricing-heading-simple>p{font-size:14.5px}
+          #ofertas .price-card{padding:23px 18px}
+          #ofertas .pricing-feature-list li{font-size:15px;padding:12px 0}
+          #ofertas .feature-check{flex-basis:24px;width:24px;height:24px;font-size:15px}
+          #ofertas .price-row strong{font-size:45px}
+          #ofertas .complete-discount-badge{margin-top:11px;padding:6px 11px;font-size:10.5px}
+          #ofertas .complete-offer-price{padding:0}
+          #ofertas .complete-old-price{font-size:15.5px;transform:translateY(15px)}
+          #ofertas .complete-now-label{font-size:15px}
+          #ofertas .complete-now-price{font-size:47px;filter:drop-shadow(0 2px 2px rgba(0,0,0,.14))}
+          #ofertas .complete-installment{font-size:12px}
+          #ofertas .complete-installment strong{font-size:13.5px}
+          #ofertas .complete .cta-primary{font-size:15px;min-height:60px;padding-inline:14px}
+        }
+        @media(max-width:390px){
+          #ofertas .complete-now-row{gap:7px}
+          #ofertas .complete-now-label{font-size:14.5px}
+          #ofertas .complete-now-price{font-size:43px}
+        }
+        @media(prefers-reduced-motion:reduce){
+          #ofertas .pricing-title-gradient{animation:none;background-position:50% 50%}
+          #ofertas .complete .cta-primary::before{animation:none;display:none}
+        }
+        </style>
   <title>Revisão de Enfermagem | Concursos 2026</title>
 </head>
 <body>
@@ -112,9 +182,109 @@
         </div>
       </div>
     </section>
-    <section class="section pricing" id="ofertas" aria-labelledby="pricing-title"><div class="container"><div class="section-heading center"><p class="eyebrow">ESCOLHA O NÍVEL DE ACESSO</p><h2 id="pricing-title">Comece com o essencial ou leve o pacote completo.</h2><p>inserir valor aqui</p></div><div class="price-grid"><article class="price-card basic"><div class="plan-head"><p class="plan-kicker">OPÇÃO ESSENCIAL</p><h3>Pacote Básico</h3><p>inserir valor aqui</p></div><div class="plan-visual" aria-hidden="true"><div class="mini-pack"><div class="mini-book">inserir valor aqui</div><div class="mini-book">inserir valor aqui</div><div class="mini-book">inserir valor aqui</div></div></div><ul class="feature-list"><li>inserir valor aqui</li><li>inserir valor aqui</li><li>inserir valor aqui</li><li>inserir valor aqui</li><li>inserir valor aqui</li></ul><div class="price-row"><div><span>Pagamento único</span><strong>inserir valor aqui</strong></div></div><a class="cta cta-secondary" href="#" data-checkout="basico">QUERO O PACOTE BÁSICO</a><p class="access-note">Acesso digital • sem mensalidade</p></article><article class="price-card complete"><span class="value-badge">MELHOR ESCOLHA</span><div class="plan-head"><p class="plan-kicker">EXPERIÊNCIA COMPLETA</p><h3>Pacote Completo</h3><p>inserir valor aqui</p></div><div class="plan-visual" aria-hidden="true"><div class="mini-pack"><div class="mini-book">inserir valor aqui</div><div class="mini-book">inserir valor aqui</div><div class="mini-book">inserir valor aqui</div></div></div><ul class="feature-list"><li>inserir valor aqui</li><li>07 dias de garantia</li><li>Suporte 24 horas</li><li>inserir valor aqui</li><li>inserir valor aqui</li><li>inserir valor aqui</li><li>inserir valor aqui</li><li>inserir valor aqui</li></ul><div class="bonus-panel"><div class="bonus-title"><span>+</span><h4>BÔNUS EXCLUSIVOS DO PACOTE COMPLETO</h4></div><div class="bonus-list"><div class="bonus-item"><strong>inserir valor aqui</strong><p>inserir valor aqui</p></div><div class="bonus-item"><strong>inserir valor aqui</strong><p>inserir valor aqui</p></div><div class="bonus-item"><strong>inserir valor aqui</strong><p>inserir valor aqui</p></div><div class="bonus-item"><strong>inserir valor aqui</strong><p>inserir valor aqui</p></div><div class="bonus-item"><strong>inserir valor aqui</strong><p>inserir valor aqui</p></div></div></div><div class="compare-note">inserir valor aqui</div><div class="price-row"><div><span>Pagamento único</span><strong>inserir valor aqui</strong></div></div><a class="cta cta-primary" href="#" data-checkout="completo">QUERO O PACOTE COMPLETO</a><p class="access-note">Garantia de 7 dias • suporte 24 horas</p></article></div></div></section>
+    <section class="section bonuses" id="bonus-exclusivos" aria-labelledby="bonus-title">
+      <div class="container">
+        <div class="bonus-heading">
+          <h2 id="bonus-title">Bônus Exclusivos 🎁</h2>
+        </div>
+
+        <div class="bonus-strip" aria-label="Bônus exclusivos do pacote completo">
+          <article class="bonus-card">
+            <div class="bonus-visual" data-bonus-image="cronograma" aria-label="Espaço reservado para a imagem do Cronograma de Estudos"></div>
+            <div class="bonus-copy">
+              <h3>Cronograma de Estudos</h3>
+              <p>Organize estudos até a prova.</p>
+            </div>
+          </article>
+
+          <article class="bonus-card">
+            <div class="bonus-visual" data-bonus-image="mnemonicos" aria-label="Espaço reservado para a imagem do Mural de Mnemônicos"></div>
+            <div class="bonus-copy">
+              <h3>Mural de Mnemônicos</h3>
+              <p>Memorize conteúdos difíceis com atalhos.</p>
+            </div>
+          </article>
+
+          <article class="bonus-card">
+            <div class="bonus-visual" data-bonus-image="caderno-erros" aria-label="Espaço reservado para a imagem do Caderno de Erros"></div>
+            <div class="bonus-copy">
+              <h3>Caderno de Erros</h3>
+              <p>Revise falhas antes de repeti-las.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section pricing" id="ofertas" aria-labelledby="pricing-title">
+      <div class="container">
+        <div class="section-heading center pricing-heading-simple">
+          <h2 id="pricing-title">Tenha acesso a <span class="pricing-title-gradient">Tudo</span></h2>
+          <p>Garanta todo o material por apenas <strong>R$ 7,10 a mais!</strong></p>
+        </div>
+
+        <div class="price-grid">
+          <article class="price-card basic">
+            <div class="plan-head">
+              <p class="plan-kicker">OPÇÃO BÁSICA</p>
+              <h3>PACOTE BÁSICO</h3>
+              <p>Para quem quer começar com o essencial.</p>
+            </div>
+
+            <ul class="feature-list pricing-feature-list">
+              <li><span class="feature-check" aria-hidden="true">✔</span><span class="feature-text"><strong>100 Mapas Mentais</strong></span></li>
+              <li><span class="feature-check" aria-hidden="true">✔</span><span class="feature-text"><strong>250 Questões Gabaritadas</strong></span></li>
+              <li><span class="feature-check" aria-hidden="true">✔</span><span class="feature-text"><strong>25 Simulados</strong></span></li>
+              <li><span class="feature-check" aria-hidden="true">✔</span><span class="feature-text">Acesso por período limitado</span></li>
+            </ul>
+
+            <div class="price-row"><div><strong><small>R$</small> 19,90</strong></div></div>
+            <a class="cta cta-secondary" href="https://pay.wiapy.com/EjGcghAid3lO" data-checkout="basico">QUERO O PACOTE BÁSICO</a>
+            <p class="access-note">Acesso enviado por e-mail</p>
+          </article>
+
+          <article class="price-card complete">
+            <span class="value-badge">MELHOR OPÇÃO</span>
+            <div class="plan-head">
+              <p class="plan-kicker">EXPERIÊNCIA COMPLETA</p>
+              <h3>PACOTE COMPLETO</h3>
+              <p>Mais conteúdo, bônus exclusivos e acesso vitalício.</p>
+            </div>
+
+            <ul class="feature-list pricing-feature-list pricing-feature-list--complete">
+              <li><span class="feature-check" aria-hidden="true">✔</span><span class="feature-text"><strong>+200 Mapas Mentais</strong></span></li>
+              <li><span class="feature-check" aria-hidden="true">✔</span><span class="feature-text"><strong>+500 Questões Gabaritadas</strong></span></li>
+              <li><span class="feature-check" aria-hidden="true">✔</span><span class="feature-text"><strong>+50 Simulados</strong></span></li>
+              <li><span class="feature-check" aria-hidden="true">✔</span><span class="feature-text">Acesso vitalício</span></li>
+              <li><span class="feature-check" aria-hidden="true">✔</span><span class="feature-text">Suporte 24 horas</span></li>
+              <li><span class="feature-check" aria-hidden="true">✔</span><span class="feature-text">7 dias de garantia</span></li>
+              <li class="bonus-divider"><span class="bonus-plus" aria-hidden="true">+</span><span class="feature-text">3 MEGA BÔNUS</span></li>
+              <li class="bonus-item-name"><span class="feature-check" aria-hidden="true">✔</span><span class="feature-text">Cronograma de Estudos</span></li>
+              <li class="bonus-item-name"><span class="feature-check" aria-hidden="true">✔</span><span class="feature-text">Mural de Mnemônicos</span></li>
+              <li class="bonus-item-name"><span class="feature-check" aria-hidden="true">✔</span><span class="feature-text">Caderno de Erros</span></li>
+            </ul>
+
+            <div class="complete-discount-badge">83% DE PROMOÇÃO SOMENTE HOJE!</div>
+            <div class="complete-offer-price">
+              <div class="complete-old-price">De <span>R$ 158,82</span></div>
+              <div class="complete-now-row">
+                <span class="complete-now-label">Hoje por apenas</span>
+                <strong class="complete-now-price"><small>R$</small> 27,00</strong>
+              </div>
+              <div class="complete-installment">ou <strong>6x de R$ 5,37</strong> no cartão</div>
+            </div>
+
+            <a class="cta cta-primary" href="https://pay.wiapy.com/NGRHeQfp1_WI" data-checkout="completo">SIM! QUERO O PACOTE COMPLETO!</a>
+            <p class="access-note">Acesso enviado por e-mail</p>
+          </article>
+        </div>
+      </div>
+    </section>
     <section class="section guarantee" aria-labelledby="guarantee-title"><div class="container"><div class="guarantee-card"><div class="guarantee-seal" aria-hidden="true"><strong>7</strong><span>DIAS</span></div><div><h2 id="guarantee-title">Você tem 7 dias para conhecer o material.</h2></div></div></div></section>
-    <section class="section faq" aria-labelledby="faq-title"><div class="container"><div class="section-heading center"><h2 id="faq-title">Dúvidas frequentes</h2></div><div class="faq-list"><details><summary>Qual é a diferença entre o Pacote Básico e o Completo?<span>+</span></summary><p>inserir valor aqui</p></details><details><summary>Por quanto tempo tenho acesso?<span>+</span></summary><p>inserir valor aqui</p></details><details><summary>inserir valor aqui<span>+</span></summary><p>inserir valor aqui</p></details><details><summary>Tem garantia?<span>+</span></summary><p>O Pacote Completo possui garantia de 7 dias, conforme as condições exibidas no checkout.</p></details></div></div></section>
+    <section class="section faq" aria-labelledby="faq-title"><div class="container"><div class="section-heading center"><h2 id="faq-title">Dúvidas frequentes</h2></div><div class="faq-list">
+      <details><summary>Qual é a diferença entre o Pacote Básico e o Completo?<span>+</span></summary><p>O Básico inclui 100 mapas mentais, 250 questões gabaritadas e 25 simulados, com acesso por período limitado. O Completo inclui +200 mapas mentais, +500 questões gabaritadas, +50 simulados, 3 bônus exclusivos, acesso vitalício, suporte 24h e garantia de 7 dias.</p></details>
+      <details><summary>Por quanto tempo tenho acesso?<span>+</span></summary><p>O Pacote Básico possui acesso por período limitado. O Pacote Completo possui acesso vitalício ao material.</p></details>
+      <details><summary>O pagamento é mensal?<span>+</span></summary><p>Não. Os dois pacotes são de pagamento único, sem mensalidade.</p></details>
+      <details><summary>Tem garantia?<span>+</span></summary><p>Sim. O Pacote Completo possui garantia de 7 dias, conforme as condições exibidas no checkout.</p></details></div></div></section>
   </main>
   <footer class="site-footer"><div class="container"><div class="footer-grid"><div><p>Este site não faz parte do site do Facebook ou do Facebook Inc. Além disso, este site NÃO é endossado pelo Facebook de nenhuma maneira. FACEBOOK é uma marca comercial da FACEBOOK, Inc. Os resultados podem variar de pessoa para pessoa.</p></div><div class="footer-links"><a href="/privacidade">Política de Privacidade</a><a href="/termos">Termos de Uso</a></div></div><div class="footer-note">Revisão de Enfermagem não possui vínculo oficial com bancas organizadoras, órgãos públicos ou concursos citados. © 2026 Revisão de Enfermagem.</div></div></footer>
   <script>
